@@ -13,7 +13,6 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   position: absolute;
-  width: 100px;
   height: 100%;
   right: 0;
   top: 0;
@@ -21,6 +20,20 @@
   background-color: #fff;
   z-index: 1000;
   color: #3c3c3c;
+  font-size: 16px;
+}
+.site-wrapper-pagination {
+  width: 80px;
+}
+@media screen and (min-width: 1024px) {
+  .site-wrapper-pagination {
+    width: calc(13.698630137vw - 60.2739726027px);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .site-wrapper-pagination {
+    width: 100px;
+  }
 }
 .site-wrapper-pagination {
   padding-top: 40px;

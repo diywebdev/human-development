@@ -4,7 +4,7 @@
 	display: flex;
 	&__left {
 		position: relative;
-		@include interpolate(width, 1170px, 1920px, 434px, 690px);
+		@include interpolate(width, 1024px, 1920px, 390px, 690px);
 		height: 100%;
 		@include interpolate(padding-top, 1170px, 1920px, 40px, 64px);
 		@include interpolate(padding-right, 1170px, 1920px, 35px, 56px);
@@ -54,7 +54,7 @@
 		}
 	}
 	&__logo {
-		@include interpolate(width, 1170px, 1920px, 134px, 215px);
+		@include interpolate(width, 1170px, 1920px, 150px, 215px);
 	}
 	&__authors {
 		p {
@@ -73,8 +73,8 @@
 	&__book {
 		position: absolute;
 		bottom: 0;
-		@include interpolate(left, 1170px, 1920px, 135px, 215px);
-		@include interpolate(width, 1170px, 1920px, 734px, 974px);
+		@include interpolate(left, 1024px, 1920px, 135px, 215px);
+		@include interpolate(width, 1024px, 1920px, 630px, 974px);
 		z-index: 10;
 		img {
 			width: 100%;
@@ -85,11 +85,11 @@
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
-		@include interpolate(gap, 1170px, 1920px, 68px, 108px);
-		@include interpolate(padding-top, 1170px, 1920px, 56px, 90px);
-		@include interpolate(padding-right, 1170px, 1920px, 35px, 56px);
-		@include interpolate(padding-bottom, 1170px, 1920px, 40px, 64px);
-		@include interpolate(padding-left, 1170px, 1920px, 64px, 102px);
+		@include interpolate(gap, 1024px, 1920px, 61px, 108px);
+		@include interpolate(padding-top, 1024px, 1920px, 50.4px, 90px);
+		@include interpolate(padding-right, 1024px, 1920px, 31.5px, 56px);
+		@include interpolate(padding-bottom, 1024px, 1920px, 36px, 64px);
+		@include interpolate(padding-left, 1024px, 1920px, 50px, 102px);
 		h2 {
 			width: min-content;
 		}
@@ -104,17 +104,21 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-			@include interpolate(padding-left, 1170px, 1920px, 189px, 302px);
+			@include interpolate(padding-left, 1024px, 1920px, 160px, 302px);
             p{
+                @include interpolate(font-size, 1024px, 1170px, 16px, 18px);
                 @include interpolate(font-size, 1170px, 1920px, 18px, 20px);
                 @include interpolate(width, 1170px, 1920px, 308px, 492px);
-                @include interpolate(margin-bottom, 1170px, 1920px, 30px, 48px);
+                @include interpolate(margin-bottom, 1024px, 1920px, 27px, 40px);
                 color: #8c8c8c;
             }
             ul{
-                @include interpolate(padding-left, 1170px, 1920px, 24px, 38px);
+                @include interpolate(padding-left, 1024px, 1920px, 21.6px, 30px);
+                margin-bottom: 15px;
+                @include interpolate(font-size, 1024px, 1170px, 14px, 16px);
+                @include interpolate(font-size, 1170px, 1920px, 16px, 18px);
                 li:not(:last-child){
-                    @include interpolate(margin-bottom, 1170px, 1920px, 11px, 18px);
+                    @include interpolate(margin-bottom, 1024px, 1920px, 10px, 18px);
                 }
             }
 		}

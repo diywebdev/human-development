@@ -27,6 +27,10 @@ body {
   height: 100%;
 }
 
+.swiper-wrapper {
+  will-change: transform;
+}
+
 body {
   background-color: #f8f8f8;
   line-height: 1.4;
@@ -78,11 +82,11 @@ section {
   overflow-y: auto !important;
 }
 section h2 {
-  font-size: 91px;
+  font-size: 90px;
 }
 @media screen and (min-width: 1024px) {
   section h2 {
-    font-size: calc(6.5848214286vw + 23.5714285714px);
+    font-size: calc(6.6964285714vw + 21.4285714286px);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -93,10 +97,22 @@ section h2 {
 
 .screen-block {
   min-height: 700px;
-  height: 100%;
-  padding-right: 100px;
+  height: inherit;
   overflow: hidden;
   position: relative;
+}
+.screen-block {
+  padding-right: 80px;
+}
+@media screen and (min-width: 1024px) {
+  .screen-block {
+    padding-right: calc(13.698630137vw - 60.2739726027px);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .screen-block {
+    padding-right: 100px;
+  }
 }
 
 .blue-gradient {
@@ -113,14 +129,57 @@ section h2 {
   width: -moz-fit-content;
   width: fit-content;
   font-weight: bold;
-  padding: 26px 60px;
-  font-size: 18px;
   background-color: #C5A23B;
   color: #fff;
   border-radius: 117px;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   cursor: pointer;
+}
+.btn {
+  padding-top: 23px;
+  padding-bottom: 23px;
+}
+@media screen and (min-width: 1024px) {
+  .btn {
+    padding-top: calc(2.0547945205vw + 1.9589041096px);
+    padding-bottom: calc(2.0547945205vw + 1.9589041096px);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .btn {
+    padding-top: 26px;
+    padding-bottom: 26px;
+  }
+}
+.btn {
+  padding-left: 53px;
+  padding-right: 53px;
+}
+@media screen and (min-width: 1024px) {
+  .btn {
+    padding-left: calc(4.1095890411vw + 10.9178082192px);
+    padding-right: calc(4.1095890411vw + 10.9178082192px);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .btn {
+    padding-left: 59px;
+    padding-right: 59px;
+  }
+}
+.btn {
+  font-size: 14px;
+}
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: calc(1.3698630137vw - 0.0273972603px);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .btn {
+    font-size: 16px;
+  }
 }
 .btn:hover {
   background-color: #cbab4f;

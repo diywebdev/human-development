@@ -24,6 +24,11 @@ body {
 	height: 100%;
 }
 
+.swiper-wrapper{
+	will-change: transform;
+	// transition: all 1s cubic-bezier(.73,.07,.09,.92);
+}
+
 body {
 	background-color: #f8f8f8;
 	line-height: 1.4;
@@ -61,14 +66,14 @@ img{
 section {
 	overflow-y: auto !important;
 	h2{
-		@include interpolate(font-size, 1024px, 1920px, 91px, 150px);
+		@include interpolate(font-size, 1024px, 1920px, 90px, 150px);
 	}
 }
 
 .screen-block {
 	min-height: 700px;
-	height: 100%;
-	padding-right: 100px;
+	height: inherit;
+	@include interpolate(padding-right, 1024px, 1170px, 80px, 100px);
 	overflow: hidden;
 	position: relative;
 }
@@ -85,8 +90,9 @@ section {
 	display: inline-block;
 	width: fit-content;
 	font-weight: bold;
-	padding: 26px 60px;
-	font-size: 18px;
+	@include interpolate((padding-top, padding-bottom), 1024px, 1170px, 23px, 26px);
+	@include interpolate((padding-left, padding-right), 1024px, 1170px, 53px, 59px);
+	@include interpolate(font-size, 1024px, 1170px, 14px, 16px);
 	background-color: #C5A23B;
 	color: #fff;
 	border-radius: 117px;
