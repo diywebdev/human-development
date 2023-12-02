@@ -1,49 +1,73 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&family=Playfair+Display&display=swap');
 
-::selection{
-    background-color: #C5A23B;
-    color: #fff;
+::selection {
+	background-color: #c5a23b;
+	color: #fff;
 }
 
-html, body {
-    position: relative;
-    height: 100%;
+html,
+body {
+	position: relative;
+	height: 100%;
 }
 
-.swiper {
-    width: 100%;
-    height: 100%;
+.site-wrapper {
+	width: 100%;
+	height: 100%;
 }
 
-body{
-    background-color: #f8f8f8;
-    font-size: 16px;
-    line-height: 1.4;
-    font-family: 'PT Sans', sans-serif;
+body {
+	background-color: #f8f8f8;
+	font-size: 16px;
+	line-height: 1.4;
+	font-family: 'PT Sans', sans-serif;
 }
 
-h1, h2, h3, h4{
-    color: #151554;
-    font-family: 'Playfair Display', serif;
+h1,
+h2,
+h3 {
+	color: #151554;
+	font-family: 'Playfair Display', serif;
 }
 
-section{
-    overflow-y: auto;
+h4{
+	color: #C5A23B;
+	font-weight: bold;
 }
 
-.block{
-    min-height: 700px;
-    height: 100%;
-    display: flex !important;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0 10vw;
-    text-align: center;
+a {
+	display: inline-block;
+	text-decoration: none;
+	color: inherit;
+	transition: all 0.25s ease;
+}
+
+img{
+	display: block;
+	margin: 0;
+	max-width: 100%;
+}
+
+section {
+	overflow-y: auto;
+}
+
+.screen-block {
+	min-height: 700px;
+	height: 100%;
+	padding-right: 100px;
+}
+
+.blue-gradient {
+	background: linear-gradient(150deg, #282895 5.34%, #181869 114.76%);
+}
+
+.star{
+	position: absolute;
 }

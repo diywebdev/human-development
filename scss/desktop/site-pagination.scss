@@ -1,0 +1,55 @@
+@import "../vars";
+.site-wrapper-pagination {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	position: absolute;
+	width: 100px;
+	height: 100%;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background-color: #fff;
+	z-index: 1000;
+	padding: calc(1vh * 5.72) 0;
+	color: #3c3c3c;
+}
+
+.site-pagination {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	right: auto !important;
+	left: auto !important;
+	top: auto !important;
+	transform: translate3d(0, 0, 0) !important;
+	.swiper-pagination-bullet {
+		position: relative;
+		border-radius: 0;
+		width: 16px;
+		height: 16px;
+		background-color: transparent;
+		opacity: 1;
+		margin: 0 !important;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 6px;
+			height: 6px;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #cfcfcf;
+			transition: background-color 0.25s ease-in-out;
+		}
+		&:hover::before {
+			background-color: darken(#cfcfcf, 10%);
+		}
+		&.swiper-pagination-bullet-active::before {
+			background-color: #666;
+		}
+	}
+}

@@ -1,0 +1,68 @@
+@import '../vars';
+.hero {
+	display: flex;
+	&__left {
+		position: relative;
+		width: 37.1vw;
+		height: 100%;
+		padding: $screen-padding;
+		z-index: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&::before {
+			content: '';
+			position: absolute;
+			inset: 0;
+			background-image: url(../../public/images/hero/hero-bg.png);
+			opacity: 0.1;
+			z-index: -1;
+			background-size: 100%;
+			background-position: center;
+		}
+		&--content {
+			margin-top: calc(1vh * 13.3);
+			flex-grow: 1;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+            max-width: 286px;
+            color: #fff;
+            h4{
+                margin-bottom: 15px;
+            }
+		}
+        &--descr{
+            color: #6565E1;
+            max-width: 197px;
+        }
+        .star-1{
+            width: calc($index * 1.4);
+            left: calc($index * 15.1);
+            top: calc($index * 4.2);
+        }
+        .star-2{
+            width: calc($index * 2.2);
+            left: calc($index * 11);
+            top: calc(1vh * 45);
+            transform: rotate(-50deg);
+        }
+	}
+	&__logo {
+		width: calc($index * 7.17);
+	}
+    &__authors{
+        p{
+            color: #6565E1;
+            margin-bottom: 15px; 
+        }
+        &--row{
+            display: flex;
+            gap: calc($index * .29);
+            img{
+                width: calc($index * 3.85);
+                border-radius: 100%;
+            }
+        }
+    }
+}

@@ -7,21 +7,22 @@
 }
 
 ::-moz-selection {
-  background-color: #C5A23B;
+  background-color: #c5a23b;
   color: #fff;
 }
 
 ::selection {
-  background-color: #C5A23B;
+  background-color: #c5a23b;
   color: #fff;
 }
 
-html, body {
+html,
+body {
   position: relative;
   height: 100%;
 }
 
-.swiper {
+.site-wrapper {
   width: 100%;
   height: 100%;
 }
@@ -33,31 +34,46 @@ body {
   font-family: "PT Sans", sans-serif;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3 {
   color: #151554;
   font-family: "Playfair Display", serif;
+}
+
+h4 {
+  color: #C5A23B;
+  font-weight: bold;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+
+img {
+  display: block;
+  margin: 0;
+  max-width: 100%;
 }
 
 section {
   overflow-y: auto;
 }
 
-.block {
+.screen-block {
   min-height: 700px;
   height: 100%;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 0 10vw;
-  text-align: center;
+  padding-right: 100px;
+}
+
+.blue-gradient {
+  background: linear-gradient(150deg, #282895 5.34%, #181869 114.76%);
+}
+
+.star {
+  position: absolute;
 }/*# sourceMappingURL=global.css.map */

@@ -13,6 +13,7 @@
 
 	<link rel="stylesheet" href="public/stylesheets/global.css">
 
+	<link rel="stylesheet" href="public/stylesheets/site-pagination.css">
 	<link rel="stylesheet" href="public/stylesheets/hero.css">
 
 	<link rel="stylesheet" href="public/stylesheets/tablet.css">
@@ -21,24 +22,50 @@
 </head>
 
 <body>
-	<div class="swiper">
+	<div class="swiper site-wrapper">
 		<div class="swiper-wrapper">
-			<section class="swiper-slide" style="background-color: aliceblue;" data-hash="one">
-				<div class="block">
-					<h2>One Screen</h2>
+			<section class="swiper-slide" data-hash="hero">
+				<div class="screen-block hero">
+					<div class="hero__left blue-gradient">
+						<img src="public/images/icons/star-purple.svg" alt="Star" class="star star-1">
+						<img src="public/images/icons/star-gold-big.svg" alt="Star" class="star star-2">
+						<div class="hero__logo">
+							<img src="public/images/logo.png" alt="ALT">
+						</div>
+						<div class="hero__left--content">
+							<div class="">
+								<h4>Бесплатный курс</h4>
+								<p>Разработанный на&nbsp;основе новой космической философии, изложенной русскими писателями&nbsp;&mdash; Л.&nbsp;А. Секлитовой и&nbsp;Л.&nbsp;Л.&nbsp;Стрельниковой.</p>
+							</div>
+							<div class="hero__authors">
+								<p>Авторы:</p>
+								<div class="hero__authors--row">
+									<img src="public/images/hero/author-1.jpg" alt="ALT">
+									<img src="public/images/hero/author-2.jpg" alt="ALT">
+								</div>
+							</div>
+							<div class="hero__left--descr">В&nbsp;книгах авторов изложены значимые и&nbsp;передовые в&nbsp;эволюционном плане знания, существующие на&nbsp;сегодняшний день</div>
+						</div>
+					</div>
 				</div>
 			</section>
 			<section class="swiper-slide" style="background-color: aqua;" data-hash="two">
-				<div class="block">
+				<div class="screen-block">
 					<h2>Two Screen</h2>
 				</div>
 			</section>
 			<section class="swiper-slide" style="background-color: aquamarine;" data-hash="three">
-				<div class="block">
+				<div class="screen-block">
 					<h2>Three Screen</h2>
 				</div>
 			</section>
 		</div>
+	</div>
+
+	<div class="site-wrapper-pagination">
+		<a href="#!" class="burger-menu">Меню</a>
+		<div class="site-pagination"></div>
+		<a href="#!" class="">Запись</a>
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

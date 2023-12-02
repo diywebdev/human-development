@@ -2,9 +2,9 @@ new Swiper('.swiper', {
 	loop: false,
 	direction: 'vertical',
 	allowTouchMove: false,
-	hashNavigation: {
-		replaceState: true,
-	},
+	// hashNavigation: {
+	// 	replaceState: true,
+	// },
 	keyboard: {
 		enabled: true,
 		onlyInViewport: false,
@@ -12,7 +12,7 @@ new Swiper('.swiper', {
 	mousewheel: {
 		invert: false,
 	},
-    effect: "creative",
+	effect: 'creative',
 	creativeEffect: {
 		prev: {
 			// shadow: true,
@@ -22,6 +22,11 @@ new Swiper('.swiper', {
 			translate: [0, '100%', 0],
 		},
 	},
-    speed: 1000,
-    // hashNavigation: true,
+	speed: 1000,
+	// hashNavigation: true,
+	pagination: {
+		clickable: true,
+		el: '.site-pagination',
+		type: 'bullets',
+	},
 });
