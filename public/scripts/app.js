@@ -1,7 +1,7 @@
 new Swiper('.swiper', {
 	loop: false,
 	direction: 'vertical',
-	allowTouchMove: false,
+	// allowTouchMove: false,
 	// hashNavigation: {
 	// 	replaceState: true,
 	// },
