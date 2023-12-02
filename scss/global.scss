@@ -55,13 +55,15 @@ img{
 }
 
 section {
-	overflow-y: auto;
+	overflow-y: auto !important;
 }
 
 .screen-block {
 	min-height: 700px;
 	height: 100%;
 	padding-right: 100px;
+	overflow: hidden;
+	position: relative;
 }
 
 .blue-gradient {

@@ -5,7 +5,7 @@
 }
 .hero__left {
   position: relative;
-  width: 37.1vw;
+  width: calc((1vw + 1vh) * 23.2);
   height: 100%;
   padding: 5.72vh 35px 5.72vh 5.72vh;
   z-index: 1;
@@ -83,4 +83,14 @@
 .hero__authors--row img {
   width: calc((1vw + 1vh) * 3.85);
   border-radius: 100%;
+}
+.hero__book {
+  position: absolute;
+  bottom: 0;
+  left: calc((1vw + 1vh) * 7.2);
+  width: calc((1vw + 1vh) * 39.4);
+  z-index: 10;
+}
+.hero__book img {
+  width: 100%;
 }/*# sourceMappingURL=hero.css.map */

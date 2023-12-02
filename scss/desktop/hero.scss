@@ -3,7 +3,7 @@
 	display: flex;
 	&__left {
 		position: relative;
-		width: 37.1vw;
+		width: calc($index * 23.2);
 		height: 100%;
 		padding: $screen-padding;
 		z-index: 1;
@@ -63,6 +63,16 @@
                 width: calc($index * 3.85);
                 border-radius: 100%;
             }
+        }
+    }
+    &__book{
+        position: absolute;
+        bottom: 0;
+        left: calc($index * 7.2);
+        width: calc($index * 39.4);
+        z-index: 10;
+        img{
+            width: 100%;
         }
     }
 }
