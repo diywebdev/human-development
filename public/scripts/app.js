@@ -9,9 +9,7 @@ new Swiper('.swiper', {
 		enabled: true,
 		onlyInViewport: false,
 	},
-	mousewheel: {
-		invert: false,
-	},
+	mousewheel: true,
 	effect: 'creative',
 	creativeEffect: {
 		prev: {
