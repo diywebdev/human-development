@@ -1,3 +1,5 @@
+@import "vars";
+@import "mixins";
 * {
 	padding: 0;
 	margin: 0;
@@ -24,9 +26,9 @@ body {
 
 body {
 	background-color: #f8f8f8;
-	font-size: 16px;
 	line-height: 1.4;
 	font-family: 'PT Sans', sans-serif;
+	@include interpolate(font-size, 1170px, 1920px, 16px, 18px);
 }
 
 h1,
@@ -34,6 +36,8 @@ h2,
 h3 {
 	color: #151554;
 	font-family: 'Playfair Display', serif;
+	font-weight: 400;
+	line-height: 1;
 }
 
 h4{
@@ -56,6 +60,9 @@ img{
 
 section {
 	overflow-y: auto !important;
+	h2{
+		@include interpolate(font-size, 1024px, 1920px, 91px, 150px);
+	}
 }
 
 .screen-block {
@@ -72,4 +79,20 @@ section {
 
 .star{
 	position: absolute;
+}
+
+.btn{
+	display: inline-block;
+	width: fit-content;
+	font-weight: bold;
+	padding: 26px 60px;
+	font-size: 18px;
+	background-color: #C5A23B;
+	color: #fff;
+	border-radius: 117px;
+	transition: all .25s ease;
+	cursor: pointer;
+	&:hover{
+		background-color: lighten(#C5A23B, 5%);
+	}
 }

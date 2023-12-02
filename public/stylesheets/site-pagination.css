@@ -20,8 +20,33 @@
   bottom: 0;
   background-color: #fff;
   z-index: 1000;
-  padding: 5.72vh 0;
   color: #3c3c3c;
+}
+.site-wrapper-pagination {
+  padding-top: 40px;
+}
+@media screen and (min-width: 1170px) {
+  .site-wrapper-pagination {
+    padding-top: calc(3.2vw + 2.56px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .site-wrapper-pagination {
+    padding-top: 64px;
+  }
+}
+.site-wrapper-pagination {
+  padding-bottom: 40px;
+}
+@media screen and (min-width: 1170px) {
+  .site-wrapper-pagination {
+    padding-bottom: calc(3.2vw + 2.56px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .site-wrapper-pagination {
+    padding-bottom: 64px;
+  }
 }
 
 .site-pagination {

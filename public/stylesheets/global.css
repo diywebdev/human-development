@@ -29,9 +29,21 @@ body {
 
 body {
   background-color: #f8f8f8;
-  font-size: 16px;
   line-height: 1.4;
   font-family: "PT Sans", sans-serif;
+}
+body {
+  font-size: 16px;
+}
+@media screen and (min-width: 1170px) {
+  body {
+    font-size: calc(0.2666666667vw + 12.88px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  body {
+    font-size: 18px;
+  }
 }
 
 h1,
@@ -39,6 +51,8 @@ h2,
 h3 {
   color: #151554;
   font-family: "Playfair Display", serif;
+  font-weight: 400;
+  line-height: 1;
 }
 
 h4 {
@@ -63,6 +77,19 @@ img {
 section {
   overflow-y: auto !important;
 }
+section h2 {
+  font-size: 91px;
+}
+@media screen and (min-width: 1024px) {
+  section h2 {
+    font-size: calc(6.5848214286vw + 23.5714285714px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  section h2 {
+    font-size: 150px;
+  }
+}
 
 .screen-block {
   min-height: 700px;
@@ -78,4 +105,23 @@ section {
 
 .star {
   position: absolute;
+}
+
+.btn {
+  display: inline-block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bold;
+  padding: 26px 60px;
+  font-size: 18px;
+  background-color: #C5A23B;
+  color: #fff;
+  border-radius: 117px;
+  -webkit-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #cbab4f;
 }/*# sourceMappingURL=global.css.map */

@@ -1,15 +1,20 @@
 @import '../vars';
+@import '../mixins';
 .hero {
 	display: flex;
 	&__left {
 		position: relative;
-		width: calc($index * 23.2);
+		@include interpolate(width, 1170px, 1920px, 434px, 690px);
 		height: 100%;
-		padding: $screen-padding;
+		@include interpolate(padding-top, 1170px, 1920px, 40px, 64px);
+		@include interpolate(padding-right, 1170px, 1920px, 35px, 56px);
+		@include interpolate(padding-bottom, 1170px, 1920px, 40px, 64px);
+		@include interpolate(padding-left, 1170px, 1920px, 40px, 64px);
 		z-index: 1;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		flex-shrink: 0;
 		&::before {
 			content: '';
 			position: absolute;
@@ -21,58 +26,97 @@
 			background-position: center;
 		}
 		&--content {
-			margin-top: calc(1vh * 13.3);
+			@include interpolate(margin-top, 1170px, 1920px, 93px, 148px);
 			flex-grow: 1;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
-            max-width: 286px;
-            color: #fff;
-            h4{
-                margin-bottom: 15px;
-            }
+			@include interpolate(width, 1170px, 1920px, 286px, 355px);
+			color: #fff;
+			h4 {
+				@include interpolate(margin-bottom, 1170px, 1920px, 15px, 24px);
+			}
 		}
-        &--descr{
-            color: #6565E1;
-            max-width: 197px;
-        }
-        .star-1{
-            width: calc($index * 1.4);
-            left: calc($index * 15.1);
-            top: calc($index * 4.2);
-        }
-        .star-2{
-            width: calc($index * 2.2);
-            left: calc($index * 11);
-            top: calc(1vh * 45);
-            transform: rotate(-50deg);
-        }
+		&--descr {
+			color: #6565e1;
+			@include interpolate(width, 1170px, 1920px, 197px, 245px);
+		}
+		.star-1 {
+			@include interpolate(width, 1170px, 1920px, 26px, 40px);
+			@include interpolate(top, 1170px, 1920px, 82px, 130px);
+			@include interpolate(left, 1170px, 1920px, 300px, 480px);
+		}
+		.star-2 {
+			@include interpolate(width, 1170px, 1920px, 40px, 64px);
+			@include interpolate(top, 1170px, 1920px, 307px, 440px);
+			@include interpolate(left, 1170px, 1920px, 210px, 336px);
+			transform: rotate(-50deg);
+		}
 	}
 	&__logo {
-		width: calc($index * 7.17);
+		@include interpolate(width, 1170px, 1920px, 134px, 215px);
 	}
-    &__authors{
-        p{
-            color: #6565E1;
-            margin-bottom: 15px; 
-        }
-        &--row{
+	&__authors {
+		p {
+			color: #6565e1;
+			@include interpolate(margin-bottom, 1170px, 1920px, 15px, 24px);
+		}
+		&--row {
+			display: flex;
+			@include interpolate(gap, 1170px, 1920px, 5px, 8px);
+			img {
+				@include interpolate(width, 1170px, 1920px, 72px, 115px);
+				border-radius: 100%;
+			}
+		}
+	}
+	&__book {
+		position: absolute;
+		bottom: 0;
+		@include interpolate(left, 1170px, 1920px, 135px, 215px);
+		@include interpolate(width, 1170px, 1920px, 734px, 974px);
+		z-index: 10;
+		img {
+			width: 100%;
+		}
+	}
+	&__right {
+		position: relative;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
+		@include interpolate(gap, 1170px, 1920px, 68px, 108px);
+		@include interpolate(padding-top, 1170px, 1920px, 56px, 90px);
+		@include interpolate(padding-right, 1170px, 1920px, 35px, 56px);
+		@include interpolate(padding-bottom, 1170px, 1920px, 40px, 64px);
+		@include interpolate(padding-left, 1170px, 1920px, 64px, 102px);
+		h2 {
+			width: min-content;
+		}
+		.star {
+			@include interpolate(width, 1170px, 1920px, 26px, 40px);
+			@include interpolate(top, 1170px, 1920px, 167px, 267px);
+			@include interpolate(right, 1170px, 1920px, 60px, 126px);
+		}
+		&--content {
+            color: #3c3c3c;
+            flex-grow: 1;
             display: flex;
-            gap: calc($index * .29);
-            img{
-                width: calc($index * 3.85);
-                border-radius: 100%;
+            flex-direction: column;
+            justify-content: space-between;
+			@include interpolate(padding-left, 1170px, 1920px, 189px, 302px);
+            p{
+                @include interpolate(font-size, 1170px, 1920px, 18px, 20px);
+                @include interpolate(width, 1170px, 1920px, 308px, 492px);
+                @include interpolate(margin-bottom, 1170px, 1920px, 30px, 48px);
+                color: #8c8c8c;
             }
-        }
-    }
-    &__book{
-        position: absolute;
-        bottom: 0;
-        left: calc($index * 7.2);
-        width: calc($index * 39.4);
-        z-index: 10;
-        img{
-            width: 100%;
-        }
-    }
+            ul{
+                @include interpolate(padding-left, 1170px, 1920px, 24px, 38px);
+                li:not(:last-child){
+                    @include interpolate(margin-bottom, 1170px, 1920px, 11px, 18px);
+                }
+            }
+		}
+	}
 }
