@@ -97,8 +97,7 @@ section h2 {
 
 .screen-block {
   min-height: 700px;
-  height: inherit;
-  overflow: hidden;
+  height: 100%;
   position: relative;
 }
 .screen-block {

@@ -1,7 +1,12 @@
-new Swiper('.swiper', {
+new Swiper('.site-wrapper', {
+	a11y: {
+		prevSlideMessage: 'Previous slide',
+		nextSlideMessage: 'Next slide',
+	  },
 	loop: false,
 	direction: 'vertical',
 	// allowTouchMove: false,
+	// initialSlide: 1,
 	// hashNavigation: {
 	// 	replaceState: true,
 	// },
@@ -9,7 +14,6 @@ new Swiper('.swiper', {
 		enabled: true,
 		onlyInViewport: false,
 	},
-	mousewheel: true,
 	effect: 'creative',
 	creativeEffect: {
 		prev: {
@@ -28,4 +32,39 @@ new Swiper('.swiper', {
 		el: '.site-pagination',
 		type: 'bullets',
 	},
+	on: {
+		init(swiper){
+			let isScrolling = false;
+			swiper.slides.map(slide => {
+				slide.addEventListener('wheel', e => {
+					const slideHeight = slide.clientHeight;
+					const blockHeight = slide.querySelector('.screen-block').clientHeight;
+					const slideScrollTop = slide.scrollTop;
+					if (!isScrolling) {
+						isScrolling = true;
+						if(slideHeight === blockHeight || (slideHeight + slideScrollTop) >= blockHeight){
+							if(e.deltaY > 0){
+								swiper.slideNext()
+							}else{
+								swiper.slidePrev()
+							}
+						}
+						else{
+							if(e.deltaY < 0){
+								swiper.slidePrev()
+							}
+						}
+
+						setTimeout(function () {
+						  isScrolling = false;
+						}, 500);
+					}
+					// console.log('Slide hieght', slideHeight);
+					// console.log('Block hieght', blockHeight);
+					// console.log('DELTA', e.deltaY);
+					// console.log('Slide scroll', slide.scrollTop);
+				})
+			})
+		}
+	}
 });

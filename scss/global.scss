@@ -72,9 +72,10 @@ section {
 
 .screen-block {
 	min-height: 700px;
-	height: inherit;
+	height: 100%;
+	// height: inherit;
 	@include interpolate(padding-right, 1024px, 1170px, 80px, 100px);
-	overflow: hidden;
+	// overflow: hidden;
 	position: relative;
 }
 
