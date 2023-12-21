@@ -33,7 +33,8 @@ body {
 	background-color: #f8f8f8;
 	line-height: 1.4;
 	font-family: 'PT Sans', sans-serif;
-	@include interpolate(font-size, 1170px, 1920px, 16px, 18px);
+	@include interpolate(font-size, 992px, 1170px,  13.57px, 16px);
+	@include interpolate(font-size, 1171px, 1920px,  16px, 18px);
 }
 
 h1,
@@ -66,16 +67,15 @@ img{
 section {
 	overflow-y: auto !important;
 	h2{
-		@include interpolate(font-size, 1024px, 1920px, 90px, 150px);
+		@include interpolate(font-size, 992px, 1170px,  84.79px, 100px);
+		@include interpolate(font-size, 1171px, 1920px,  100px, 160px);
 	}
 }
 
 .screen-block {
-	min-height: 700px;
-	height: 100%;
-	// height: inherit;
-	@include interpolate(padding-right, 1024px, 1170px, 80px, 100px);
-	// overflow: hidden;
+	min-height: 100%;
+	height: auto;
+	@include interpolate(padding-right, 992px, 1170px,  85px, 100px);
 	position: relative;
 }
 
@@ -91,15 +91,46 @@ section {
 	display: inline-block;
 	width: fit-content;
 	font-weight: bold;
-	@include interpolate((padding-top, padding-bottom), 1024px, 1170px, 23px, 26px);
-	@include interpolate((padding-left, padding-right), 1024px, 1170px, 53px, 59px);
-	@include interpolate(font-size, 1024px, 1170px, 14px, 16px);
+	@include interpolate((padding-top, padding-bottom), 992px, 1170px,  22px, 26px);
+	@include interpolate((padding-left, padding-right), 992px, 1170px,  50px, 59px);
+	@include interpolate(font-size, 992px, 1170px,  14px, 16px);
+	@include interpolate(border-radius, 992px, 1170px,  99px, 117px);
 	background-color: #C5A23B;
 	color: #fff;
-	border-radius: 117px;
 	transition: all .25s ease;
 	cursor: pointer;
 	&:hover{
 		background-color: lighten(#C5A23B, 5%);
+	}
+}
+
+.calc{
+	width: 200px;
+	box-shadow: 0 0 50px rgba(#000, .5);
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	padding: 10px;
+	z-index: 1000;
+	font-size: 16px;
+	background-color: #fff;
+	&.hidden{
+		display: none;
+	}
+	.row{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 5px;
+		margin-bottom: 10px;
+		span:first-child{
+			font-weight: bold;
+		}
+	}
+	input{
+		width: 100%;
+		flex-grow: 1;
+		padding: 5px;
 	}
 }

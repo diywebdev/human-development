@@ -37,11 +37,24 @@ body {
   font-family: "PT Sans", sans-serif;
 }
 body {
-  font-size: 16px;
+  font-size: 13.57px;
+}
+@media screen and (min-width: 992px) {
+  body {
+    font-size: calc(1.3651685393vw + 0.0275280899px);
+  }
 }
 @media screen and (min-width: 1170px) {
   body {
-    font-size: calc(0.2666666667vw + 12.88px);
+    font-size: 16px;
+  }
+}
+body {
+  font-size: 16px;
+}
+@media screen and (min-width: 1171px) {
+  body {
+    font-size: calc(0.2670226969vw + 12.873164219px);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -82,30 +95,43 @@ section {
   overflow-y: auto !important;
 }
 section h2 {
-  font-size: 90px;
+  font-size: 84.79px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   section h2 {
-    font-size: calc(6.6964285714vw + 21.4285714286px);
+    font-size: calc(8.5449438202vw + 0.0241573034px);
+  }
+}
+@media screen and (min-width: 1170px) {
+  section h2 {
+    font-size: 100px;
+  }
+}
+section h2 {
+  font-size: 100px;
+}
+@media screen and (min-width: 1171px) {
+  section h2 {
+    font-size: calc(8.0106809079vw + 6.1949265688px);
   }
 }
 @media screen and (min-width: 1920px) {
   section h2 {
-    font-size: 150px;
+    font-size: 160px;
   }
 }
 
 .screen-block {
-  min-height: 700px;
-  height: 100%;
+  min-height: 100%;
+  height: auto;
   position: relative;
 }
 .screen-block {
-  padding-right: 80px;
+  padding-right: 85px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .screen-block {
-    padding-right: calc(13.698630137vw - 60.2739726027px);
+    padding-right: calc(8.4269662921vw + 1.404494382px);
   }
 }
 @media screen and (min-width: 1170px) {
@@ -130,19 +156,18 @@ section h2 {
   font-weight: bold;
   background-color: #C5A23B;
   color: #fff;
-  border-radius: 117px;
   -webkit-transition: all 0.25s ease;
   transition: all 0.25s ease;
   cursor: pointer;
 }
 .btn {
-  padding-top: 23px;
-  padding-bottom: 23px;
+  padding-top: 22px;
+  padding-bottom: 22px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .btn {
-    padding-top: calc(2.0547945205vw + 1.9589041096px);
-    padding-bottom: calc(2.0547945205vw + 1.9589041096px);
+    padding-top: calc(2.2471910112vw - 0.2921348315px);
+    padding-bottom: calc(2.2471910112vw - 0.2921348315px);
   }
 }
 @media screen and (min-width: 1170px) {
@@ -152,13 +177,13 @@ section h2 {
   }
 }
 .btn {
-  padding-left: 53px;
-  padding-right: 53px;
+  padding-left: 50px;
+  padding-right: 50px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .btn {
-    padding-left: calc(4.1095890411vw + 10.9178082192px);
-    padding-right: calc(4.1095890411vw + 10.9178082192px);
+    padding-left: calc(5.0561797753vw - 0.1573033708px);
+    padding-right: calc(5.0561797753vw - 0.1573033708px);
   }
 }
 @media screen and (min-width: 1170px) {
@@ -170,9 +195,9 @@ section h2 {
 .btn {
   font-size: 14px;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 992px) {
   .btn {
-    font-size: calc(1.3698630137vw - 0.0273972603px);
+    font-size: calc(1.1235955056vw + 2.8539325843px);
   }
 }
 @media screen and (min-width: 1170px) {
@@ -180,6 +205,61 @@ section h2 {
     font-size: 16px;
   }
 }
+.btn {
+  border-radius: 99px;
+}
+@media screen and (min-width: 992px) {
+  .btn {
+    border-radius: calc(10.1123595506vw - 1.3146067416px);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .btn {
+    border-radius: 117px;
+  }
+}
 .btn:hover {
   background-color: #cbab4f;
+}
+
+.calc {
+  width: 200px;
+  -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 10px;
+  z-index: 1000;
+  font-size: 16px;
+  background-color: #fff;
+}
+.calc.hidden {
+  display: none;
+}
+.calc .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+.calc .row span:first-child {
+  font-weight: bold;
+}
+.calc input {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  padding: 5px;
 }/*# sourceMappingURL=global.css.map */

@@ -77,6 +77,7 @@
 			<section class="swiper-slide" style="background-color: aqua;" data-hash="two">
 				<div class="screen-block">
 					<h2>Two Screen</h2>
+					<p>123</p>
 				</div>
 			</section>
 			<section class="swiper-slide" style="background-color: aquamarine;" data-hash="three">
@@ -96,5 +97,49 @@
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="public/scripts/app.js"></script>
 </body>
+
+
+<div class="calc hidden">
+	<div class="row">
+		<span>Base: </span>
+		<input type="number" name="base-calc" value="16" />
+	</div>
+	<div class="row total-row">
+		<span data-id="screen">992</span>
+		<div>
+			<span class="total">14</span>
+			<button class="copy">Copy</button>
+		</div>
+	</div>
+	<div class="row total-row">
+		<span data-id="screen">1920</span>
+		<div>
+			<span class="total">18</span>
+			<button class="copy">Copy</button>
+		</div>
+	</div>
+</div>
+
+<script>
+	const def = 1170;
+	const calc = document.querySelector('.calc');
+	const input = document.querySelector('[name="base-calc"]');	
+	const totalRows = document.querySelectorAll('.total-row');
+
+	function inputWatch(){
+		Array.from(totalRows).map(row => {
+			const screen = Number(row.querySelector('[data-id]').innerText);
+			const coof = (screen / def);
+			row.querySelector('.total').innerText = (coof * input.value).toFixed();
+		});
+	}
+	inputWatch();
+	input.addEventListener('input', e => inputWatch())
+	document.addEventListener('keydown', e => {
+		if(e.code === 'KeyZ'){
+			calc.classList.toggle('hidden')
+		}
+	})
+</script>
 
 </html>
