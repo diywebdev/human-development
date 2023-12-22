@@ -37,29 +37,16 @@ body {
   font-family: "PT Sans", sans-serif;
 }
 body {
-  font-size: 13.57px;
+  font-size: 14px;
 }
 @media screen and (min-width: 992px) {
   body {
-    font-size: calc(1.3651685393vw + 0.0275280899px);
+    font-size: calc(1.1235955056vw + 2.8539325843px);
   }
 }
 @media screen and (min-width: 1170px) {
   body {
     font-size: 16px;
-  }
-}
-body {
-  font-size: 16px;
-}
-@media screen and (min-width: 1171px) {
-  body {
-    font-size: calc(0.2670226969vw + 12.873164219px);
-  }
-}
-@media screen and (min-width: 1920px) {
-  body {
-    font-size: 18px;
   }
 }
 

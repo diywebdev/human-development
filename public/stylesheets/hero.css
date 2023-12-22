@@ -533,19 +533,6 @@
   }
 }
 .hero__right--content p {
-  font-size: 18px;
-}
-@media screen and (min-width: 1171px) {
-  .hero__right--content p {
-    font-size: calc(0.2670226969vw + 14.873164219px);
-  }
-}
-@media screen and (min-width: 1920px) {
-  .hero__right--content p {
-    font-size: 20px;
-  }
-}
-.hero__right--content p {
   width: 261px;
 }
 @media screen and (min-width: 992px) {

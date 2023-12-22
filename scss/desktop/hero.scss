@@ -112,7 +112,7 @@
 			@include interpolate(padding-left, 992px, 1920px, 215px, 415px);
             p{
                 @include interpolate(font-size, 992px, 1170px, 15px, 18px);
-                @include interpolate(font-size, 1171px, 1920px, 18px, 20px);
+                // @include interpolate(font-size, 1171px, 1920px, 18px, 20px);
                 @include interpolate(width, 992px, 1920px, 261px, 505px);
                 @include interpolate(margin-bottom, 992px, 1920px, 25px, 49px);
                 color: #8c8c8c;

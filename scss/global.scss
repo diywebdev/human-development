@@ -33,8 +33,8 @@ body {
 	background-color: #f8f8f8;
 	line-height: 1.4;
 	font-family: 'PT Sans', sans-serif;
-	@include interpolate(font-size, 992px, 1170px,  13.57px, 16px);
-	@include interpolate(font-size, 1171px, 1920px,  16px, 18px);
+	@include interpolate(font-size, 992px, 1170px,  14px, 16px);
+	// @include interpolate(font-size, 1171px, 1920px,  16px, 18px);
 }
 
 h1,
