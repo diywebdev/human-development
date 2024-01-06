@@ -9,4 +9,25 @@
 			width: 100%;
 		}
 	}
+	.learn-what-wrapper{
+		padding: 0 10px;
+	}
+	.learn-what h2{
+		margin-bottom: 20px;
+	}
+	.learn-what-item{
+		flex-direction: column;
+	}
+	.learn-what-item-col{
+		padding: 0;
+		width: 100%;
+		text-align: center;
+	}
+	.learn-what-item-title{
+		font-size: 20px;
+		margin-bottom: 20px;
+		br{
+			display: none;
+		}
+	}
 }

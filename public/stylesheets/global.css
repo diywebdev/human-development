@@ -32,7 +32,6 @@ body {
 }
 
 body {
-  background-color: #f8f8f8;
   line-height: 1.4;
   font-family: "PT Sans", sans-serif;
 }
@@ -80,6 +79,7 @@ img {
 
 section {
   overflow-y: auto !important;
+  background-color: #f8f8f8;
 }
 section h2 {
   line-height: 1;
@@ -187,12 +187,12 @@ section h2 {
 }
 @media screen and (min-width: 992px) {
   .btn {
-    font-size: calc(1.1235955056vw + 2.8539325843px);
+    font-size: calc(2.2471910112vw - 8.2921348315px);
   }
 }
 @media screen and (min-width: 1170px) {
   .btn {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 .btn {

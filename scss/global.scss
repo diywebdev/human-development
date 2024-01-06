@@ -30,7 +30,6 @@ body {
 }
 
 body {
-	background-color: #f8f8f8;
 	line-height: 1.4;
 	font-family: 'PT Sans', sans-serif;
 	@include interpolate(font-size, 992px, 1170px,  14px, 16px);
@@ -66,6 +65,7 @@ img{
 
 section {
 	overflow-y: auto !important;
+	background-color: #f8f8f8;
 	h2{
 		@include interpolate(font-size, 992px, 1170px,  84.79px, 100px);
 		@include interpolate(font-size, 1171px, 1920px,  100px, 160px);
@@ -94,7 +94,7 @@ section {
 	font-weight: bold;
 	@include interpolate((padding-top, padding-bottom), 992px, 1170px,  22px, 26px);
 	@include interpolate((padding-left, padding-right), 992px, 1170px,  50px, 59px);
-	@include interpolate(font-size, 992px, 1170px,  14px, 16px);
+	@include interpolate(font-size, 992px, 1170px,  14px, 18px);
 	@include interpolate(border-radius, 992px, 1170px,  99px, 117px);
 	background-color: #C5A23B;
 	color: #fff;

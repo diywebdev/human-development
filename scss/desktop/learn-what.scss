@@ -1,0 +1,34 @@
+@import '../mixins';
+.learn-what{
+	@include interpolate((padding-top, padding-bottom), 992px, 1920px, 34px, 66px);
+	h2{
+		@include interpolate(margin-bottom, 992px, 1920px, 34px, 66px);
+		@include interpolate((padding-left, padding-right), 992px, 1171px, 34px, 40px);
+	}
+	&-wrapper{
+		@include interpolate((padding-left, padding-right), 992px, 1920px, 34px, 66px);
+		margin-bottom: 27px;
+	}
+	&-item{
+		display: flex;
+		@include interpolate((padding-top, padding-bottom), 992px, 1920px, 25px, 49px);
+		&:not(:last-child){
+			border-bottom: 1px solid #d9d9d9;
+		}
+		&-col{
+			width: 50%;
+			@include interpolate(padding-left, 992px, 1920px,  39px, 75px);
+		}
+		&-title{
+			@include interpolate(font-size, 992px, 1920px,  25px, 49px);
+			color: #3c3c3c;
+		}
+		li{
+			color: #8c8c8c;
+			@include interpolate(font-size, 992px, 1920px,  14px, 26px);
+			&:not(:last-child){
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

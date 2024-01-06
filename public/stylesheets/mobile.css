@@ -12,4 +12,28 @@
   .for-whom-item {
     width: 100%;
   }
+  .learn-what-wrapper {
+    padding: 0 10px;
+  }
+  .learn-what h2 {
+    margin-bottom: 20px;
+  }
+  .learn-what-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .learn-what-item-col {
+    padding: 0;
+    width: 100%;
+    text-align: center;
+  }
+  .learn-what-item-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .learn-what-item-title br {
+    display: none;
+  }
 }/*# sourceMappingURL=mobile.css.map */

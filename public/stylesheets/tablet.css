@@ -179,4 +179,15 @@
     right: 10px;
     top: 45%;
   }
+}
+@media screen and (max-width: 768px) {
+  .learn-what-item-title {
+    font-size: 20px;
+  }
+  .learn-what-item ul {
+    list-style: none;
+  }
+  .learn-what-item li {
+    font-size: 16px;
+  }
 }/*# sourceMappingURL=tablet.css.map */
