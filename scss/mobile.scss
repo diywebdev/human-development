@@ -81,7 +81,7 @@
 		padding-bottom: 128px;
 		&::after{
 			background-image: url(../images/quotes/bg-mobile.png);
-			background-position: center top;
+			background-size: cover;
 		}
 	}
 }

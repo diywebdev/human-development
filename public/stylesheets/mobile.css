@@ -96,6 +96,6 @@
   }
   .quotes::after {
     background-image: url(../images/quotes/bg-mobile.png);
-    background-position: center top;
+    background-size: cover;
   }
 }/*# sourceMappingURL=mobile.css.map */
