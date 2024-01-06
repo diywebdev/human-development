@@ -1,4 +1,4 @@
-new Swiper('.site-wrapper', {
+const slider = new Swiper('.site-wrapper', {
 	a11y: {
 		prevSlideMessage: 'Previous slide',
 		nextSlideMessage: 'Next slide',
@@ -31,6 +31,17 @@ new Swiper('.site-wrapper', {
 		clickable: true,
 		el: '.site-pagination',
 		type: 'bullets',
+	},
+	breakpoints: {
+		// when window width is >= 320px
+		320: {
+		  freeMode: true,
+		  effect: 'normal'
+		},
+		992: {
+			freeMode: false,
+			effect: 'creative'
+		}
 	},
 	on: {
 		init(swiper){
@@ -68,3 +79,9 @@ new Swiper('.site-wrapper', {
 		}
 	}
 });
+
+if(window.innerWidth < 993){
+	slider.disable()
+}else{
+	slider.enable()
+}

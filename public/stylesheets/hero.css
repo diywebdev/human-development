@@ -586,4 +586,8 @@
   .hero__right--content ul li:not(:last-child) {
     margin-bottom: 30px;
   }
+}
+
+.hero-book-mobile, .hero-content-mobile {
+  display: none;
 }/*# sourceMappingURL=hero.css.map */
