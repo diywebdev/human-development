@@ -191,6 +191,11 @@
             justify-content: start;
     gap: 40px;
   }
+  .authors h2 {
+    font-size: 30px;
+    padding: 0 16px;
+    margin-bottom: 80px;
+  }
 }
 @media screen and (max-width: 768px) {
   .learn-what-item-title {
