@@ -85,24 +85,11 @@ section h2 {
   line-height: 1;
 }
 section h2 {
-  font-size: 84.79px;
+  font-size: 85px;
 }
 @media screen and (min-width: 992px) {
   section h2 {
-    font-size: calc(8.5449438202vw + 0.0241573034px);
-  }
-}
-@media screen and (min-width: 1170px) {
-  section h2 {
-    font-size: 100px;
-  }
-}
-section h2 {
-  font-size: 100px;
-}
-@media screen and (min-width: 1171px) {
-  section h2 {
-    font-size: calc(8.0106809079vw + 6.1949265688px);
+    font-size: calc(8.0818965517vw + 4.8275862069px);
   }
 }
 @media screen and (min-width: 1920px) {
@@ -132,6 +119,7 @@ section h2 {
 
 .blue-gradient {
   background: linear-gradient(150deg, #282895 5.34%, #181869 114.76%);
+  color: #E0E0FF;
 }
 
 .star {

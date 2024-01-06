@@ -67,8 +67,7 @@ section {
 	overflow-y: auto !important;
 	background-color: #f8f8f8;
 	h2{
-		@include interpolate(font-size, 992px, 1170px,  84.79px, 100px);
-		@include interpolate(font-size, 1171px, 1920px,  100px, 160px);
+		@include interpolate(font-size, 992px, 1920px,  85px, 160px);
 		line-height: 1;
 	}
 }
@@ -82,6 +81,7 @@ section {
 
 .blue-gradient {
 	background: linear-gradient(150deg, #282895 5.34%, #181869 114.76%);
+	color: #E0E0FF;
 }
 
 .star{

@@ -179,6 +179,18 @@
     right: 10px;
     top: 45%;
   }
+  .of-what h2 {
+    font-size: 50px;
+  }
+  .of-what-right {
+    width: 400px;
+  }
+  .of-what-left {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+    gap: 40px;
+  }
 }
 @media screen and (max-width: 768px) {
   .learn-what-item-title {
@@ -189,5 +201,51 @@
   }
   .learn-what-item li {
     font-size: 16px;
+  }
+  .of-what h2 {
+    font-size: 60px;
+  }
+  .of-what-left {
+    display: none;
+  }
+  .of-what-right {
+    width: 100%;
+  }
+  .of-what-right h2 {
+    display: block;
+  }
+  .of-what .text-center {
+    text-align: center;
+  }
+  .of-what-items-mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-bottom: 30px;
+    gap: 15px;
+  }
+  .of-what-items-mobile .of-what-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    color: #E0E0FF;
+    text-align: center;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .of-what-items-mobile .of-what-item .number {
+    font-size: 40px;
+    max-width: auto;
+    text-align: center;
   }
 }/*# sourceMappingURL=tablet.css.map */

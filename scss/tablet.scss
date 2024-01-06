@@ -151,6 +151,18 @@
 			top: 45%;
 		}
 	}
+	.of-what{
+		h2{
+			font-size: 50px;
+		}
+	}
+	.of-what-right{
+		width: 400px;
+	}
+	.of-what-left{
+		justify-content: start;
+		gap: 40px;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -163,5 +175,42 @@
 	}
 	.learn-what-item li{
 		font-size: 16px;
+	}
+	.of-what{
+		h2{
+			font-size: 60px;
+		}
+		&-left{
+			display: none;
+		}
+		&-right{
+			width: 100%;
+			h2{
+				display: block;
+			}
+		}
+		.text-center{
+			text-align: center;
+		}
+	}
+	.of-what-items-mobile{
+		display: flex;
+		justify-content: center;
+		margin-bottom: 30px;
+		gap: 15px;
+		.of-what-item{
+			flex-direction: column;
+			align-items: center;
+			gap: 10px;
+			font-size: 18px;
+			color: #E0E0FF;
+			text-align: center;
+			width: fit-content;
+			.number{
+				font-size: 40px;
+				max-width: auto;
+				text-align: center;
+			}
+		}
 	}
 }

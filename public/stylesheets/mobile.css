@@ -36,4 +36,24 @@
   .learn-what-item-title br {
     display: none;
   }
+  .of-what-right {
+    padding: 50px 10px;
+  }
+  .of-what-right-content {
+    gap: 5px;
+  }
+  .of-what-right-content .badge {
+    font-size: 14px;
+    padding: 15px 20px;
+  }
+  .of-what-right-content .badge:nth-child(4) {
+    -webkit-box-ordinal-group: 6;
+        -ms-flex-order: 5;
+            order: 5;
+  }
+  .of-what-right-content .badge:nth-child(5) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
+  }
 }/*# sourceMappingURL=mobile.css.map */

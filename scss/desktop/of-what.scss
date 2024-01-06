@@ -1,0 +1,88 @@
+@import '../mixins';
+.of-what{
+	display: flex;
+	&-left{
+		flex-grow: 1;
+		@include interpolate((padding-top, padding-bottom, padding-left), 992px, 1920px, 34px, 66px);
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	&-right{
+		flex-shrink: 0;
+		padding: 20px 20px 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@include interpolate(width, 992px, 1920px, 505px, 978px);
+		h2{
+			color: #E0E0FF;
+			display: none;
+			margin-bottom: 30px;
+		}
+		&-decor-img{
+			width: 100%;
+			mix-blend-mode: luminosity;
+			border-radius: 15px;
+			margin-bottom: 20px;
+		}
+		&-content{
+			display: flex;
+			flex-wrap: wrap;
+			@include interpolate(gap, 992px, 1171px, 8px, 10px);
+			margin-bottom: 24px;
+			.badge{
+				@include interpolate(font-size, 992px, 1920px, 15px, 20px);
+				@include interpolate(padding, 992px, 1920px, 17px, 33px);
+				@include interpolate(border-radius, 992px, 1171px, 52px, 61px);
+				// line-height: 1;
+				background-color: #3535A5;
+				color: #A4A4FF;
+				border-radius: 100%;
+				&:nth-child(1){
+					order: 1;
+				}
+				&:nth-child(2){
+					order: 2;
+				}
+				&:nth-child(3){
+					order: 3;
+				}
+				&:nth-child(4){
+					order: 4;
+				}
+				&:nth-child(5){
+					order: 5;
+				}
+				&:nth-child(6){
+					order: 6;
+				}
+				&:nth-child(7){
+					order: 7;
+				}
+			}
+		}
+	}
+	&-item{
+		color: #1f1f1f;
+		@include interpolate(font-size, 992px, 1171px, 21px, 25px);
+		display: flex;
+		@include interpolate(gap, 992px, 1171px,  18px, 21px);
+		.number{
+			font-weight: bold;
+			@include interpolate(font-size, 992px, 1171px, 42px, 50px);
+			@include interpolate(min-width, 992px, 1171px, 48px, 57px);
+			@include interpolate(margin-top, 992px, 1171px, 8px, 10px);
+			line-height: 1;
+			color: #C5A23B;
+			text-align: right;
+		}
+	}
+	.text-center{
+		text-align: left;
+	}
+}
+
+.of-what-items-mobile{
+	display: none;
+}
