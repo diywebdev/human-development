@@ -6,7 +6,7 @@ const slider = new Swiper('.site-wrapper', {
 	loop: false,
 	direction: 'vertical',
 	// allowTouchMove: false,
-	// initialSlide: 1,
+	initialSlide: 1,
 	// hashNavigation: {
 	// 	replaceState: true,
 	// },
@@ -31,17 +31,6 @@ const slider = new Swiper('.site-wrapper', {
 		clickable: true,
 		el: '.site-pagination',
 		type: 'bullets',
-	},
-	breakpoints: {
-		// when window width is >= 320px
-		320: {
-		  freeMode: true,
-		  effect: 'normal'
-		},
-		992: {
-			freeMode: false,
-			effect: 'creative'
-		}
 	},
 	on: {
 		init(swiper){

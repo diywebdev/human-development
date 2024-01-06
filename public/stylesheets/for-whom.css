@@ -1,0 +1,70 @@
+.for-whom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  z-index: 1;
+}
+.for-whom {
+  padding-top: 68px;
+  padding-bottom: 68px;
+}
+@media screen and (min-width: 992px) {
+  .for-whom {
+    padding-top: calc(6.7887931034vw + 0.6551724138px);
+    padding-bottom: calc(6.7887931034vw + 0.6551724138px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .for-whom {
+    padding-top: 131px;
+    padding-bottom: 131px;
+  }
+}
+.for-whom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url(../images/for-whom/bg.png);
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+.for-whom h2 {
+  color: #E0E0FF;
+}
+.for-whom h2 {
+  font-size: 84.79px;
+}
+@media screen and (min-width: 992px) {
+  .for-whom h2 {
+    font-size: calc(8.5449438202vw + 0.0241573034px);
+  }
+}
+@media screen and (min-width: 1170px) {
+  .for-whom h2 {
+    font-size: 100px;
+  }
+}
+.for-whom h2 {
+  font-size: 100px;
+}
+@media screen and (min-width: 1171px) {
+  .for-whom h2 {
+    font-size: calc(2.6702269693vw + 68.7316421896px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .for-whom h2 {
+    font-size: 120px;
+  }
+}/*# sourceMappingURL=for-whom.css.map */

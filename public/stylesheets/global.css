@@ -82,6 +82,9 @@ section {
   overflow-y: auto !important;
 }
 section h2 {
+  line-height: 1;
+}
+section h2 {
   font-size: 84.79px;
 }
 @media screen and (min-width: 992px) {
@@ -211,6 +214,10 @@ section h2 {
 
 .header {
   display: none;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .calc {

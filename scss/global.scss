@@ -69,6 +69,7 @@ section {
 	h2{
 		@include interpolate(font-size, 992px, 1170px,  84.79px, 100px);
 		@include interpolate(font-size, 1171px, 1920px,  100px, 160px);
+		line-height: 1;
 	}
 }
 
@@ -106,6 +107,10 @@ section {
 
 .header{
 	display: none;
+}
+
+.text-center{
+	text-align: center;
 }
 
 .calc{

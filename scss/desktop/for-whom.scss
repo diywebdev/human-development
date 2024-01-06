@@ -1,0 +1,25 @@
+@import '../mixins';
+
+.for-whom{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	@include interpolate((padding-top, padding-bottom), 992px, 1920px, 68px, 131px);
+	// @include interpolate((padding-left, padding-right), 992px, 1920px, 34px, 66px);
+	z-index: 1;
+	&::before{
+		content: '';
+		position: absolute;
+		inset: 0;
+		background-image: url(../images/for-whom/bg.png);
+		background-size: cover;
+		background-position: center;
+		z-index: -1;
+	}
+	h2{
+		color: #E0E0FF;
+		@include interpolate(font-size, 992px, 1170px,  84.79px, 100px);
+		@include interpolate(font-size, 1171px, 1920px,  100px, 120px);	
+	}
+}
