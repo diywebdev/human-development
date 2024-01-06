@@ -6,7 +6,7 @@
 	align-items: center;
 	justify-content: space-between;
 	@include interpolate((padding-top, padding-bottom), 992px, 1920px, 68px, 131px);
-	// @include interpolate((padding-left, padding-right), 992px, 1920px, 34px, 66px);
+	color: #fff;
 	z-index: 1;
 	&::before{
 		content: '';
@@ -21,5 +21,28 @@
 		color: #E0E0FF;
 		@include interpolate(font-size, 992px, 1170px,  84.79px, 100px);
 		@include interpolate(font-size, 1171px, 1920px,  100px, 120px);	
+	}
+	&-content{
+		display: flex;
+		justify-content: center;
+		@include interpolate(gap, 992px, 1920px, 51px, 98px);
+	}
+	&-item{
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		align-items: center;
+		text-align: center;
+		width: fit-content;
+		.counter{
+			font-weight: bold;
+			@include interpolate(width, 992px, 1920px, 36px, 71px);
+			@include interpolate(height, 992px, 1920px, 36px, 71px);
+			border-radius: 50%;
+			background-color: #C5A23B;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
 	}
 }

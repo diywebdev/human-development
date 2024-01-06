@@ -18,7 +18,6 @@ const slider = new Swiper('.site-wrapper', {
 	creativeEffect: {
 		prev: {
 			// shadow: true,
-			// scale: 0.9,
 			translate: [0, '-40%', -1],
 		},
 		next: {
