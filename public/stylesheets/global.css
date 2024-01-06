@@ -209,6 +209,10 @@ section h2 {
   background-color: #cbab4f;
 }
 
+.header {
+  display: none;
+}
+
 .calc {
   width: 200px;
   -webkit-box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);

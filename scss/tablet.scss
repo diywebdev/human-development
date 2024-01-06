@@ -104,4 +104,26 @@
 			}
 		}
 	}
+	.header{
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		background-color: #fff;
+		padding: 20px 10px;
+		position: sticky;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		.logo img{
+			width: 135px;
+		}
+		.burger-menu{
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			img{
+				width: 13px;
+			}
+		}
+	}
 }

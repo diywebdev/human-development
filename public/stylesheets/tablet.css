@@ -123,4 +123,36 @@
     line-height: 1.4;
     margin-bottom: 15px;
   }
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background-color: #fff;
+    padding: 20px 10px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  .header .logo img {
+    width: 135px;
+  }
+  .header .burger-menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 5px;
+  }
+  .header .burger-menu img {
+    width: 13px;
+  }
 }/*# sourceMappingURL=tablet.css.map */
