@@ -1,0 +1,56 @@
+@import '../mixins';
+
+.reviews{
+	padding-top: 65px;
+	h2{
+		line-height: 0.85;
+	}
+	&-top{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		&-row{
+			display: flex;
+			align-items: end;
+			justify-content: center;
+			gap: 20px;
+			&.mobile{
+				gap: 10px;
+				align-items: center;
+				position: absolute;
+				top: 30px;
+				.reviews-slider-btn{
+					width: 45px;
+					height: 45px;
+					background-size: 20px;
+					display: none;
+				}
+			}
+		}
+	}
+}
+
+// SLIDER
+
+.reviews-slider-btn{
+	width: 76px;
+	height: 76px;
+	border-radius: 100%;
+	background-color: #fff;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	background-image: url(../images/icons/slider-arrow.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	&.reviews-slider-next{
+		transform: rotate(180deg);
+	}
+}
+.slider-counter{
+	background-color: #f3f3f3;
+	font-size: 18px;
+	padding: 13px 18px;
+	border-radius: 50px;
+	color: #C0C0C0;
+}

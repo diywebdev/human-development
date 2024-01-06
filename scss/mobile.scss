@@ -84,4 +84,18 @@
 			background-size: cover;
 		}
 	}
+	.reviews-slider-btn{
+		display: none;
+	}
+	.reviews-top-row.mobile .reviews-slider-btn{
+		display: block;
+	}
+	.reviews-top-row.mobile{
+		order: 2;
+		margin-top: 11px;
+		position: relative;
+	}
+	.slider-counter{
+		font-size: 14px;
+	}
 }
