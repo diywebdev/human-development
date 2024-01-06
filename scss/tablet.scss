@@ -9,6 +9,9 @@
 	}
 	section{
 		overflow-y: visible !important;
+		h2{
+			@include interpolate(font-size, 320px, 992px, 60px, 100px);
+		}
 	}
 	.screen-block{
 		padding-right: 0;
@@ -44,7 +47,6 @@
 			padding-left: 0;
 			width: 100%;
 			text-align: center;
-			@include interpolate(font-size, 320px, 992px, 60px, 100px);
 		}
 		.star{
 			width: 35px;
@@ -126,6 +128,27 @@
 			img{
 				width: 13px;
 			}
+		}
+	}
+	.for-whom{
+		padding: 60px 10px;
+		gap: 50px;
+		h2{
+			padding: 0;
+			width: 100%;
+		}
+		&-content{
+			flex-wrap: wrap;
+		}
+		.star-1{
+			width: 33px;
+			left: 15px;
+			top: 68%;
+		}
+		.star-2{
+			width: 45px;
+			right: 10px;
+			top: 45%;
 		}
 	}
 }

@@ -8,6 +8,21 @@
   section {
     overflow-y: visible !important;
   }
+  section h2 {
+    font-size: 60px;
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 320px) {
+  section h2 {
+    font-size: calc(5.9523809524vw + 40.9523809524px);
+  }
+}
+@media screen and (max-width: 992px) and (min-width: 992px) {
+  section h2 {
+    font-size: 100px;
+  }
+}
+@media screen and (max-width: 992px) {
   .screen-block {
     padding-right: 0;
   }
@@ -48,21 +63,6 @@
     width: 100%;
     text-align: center;
   }
-  .hero__right h2 {
-    font-size: 60px;
-  }
-}
-@media screen and (max-width: 992px) and (min-width: 320px) {
-  .hero__right h2 {
-    font-size: calc(5.9523809524vw + 40.9523809524px);
-  }
-}
-@media screen and (max-width: 992px) and (min-width: 992px) {
-  .hero__right h2 {
-    font-size: 100px;
-  }
-}
-@media screen and (max-width: 992px) {
   .hero__right .star {
     width: 35px;
     right: auto;
@@ -156,5 +156,27 @@
   }
   .header .burger-menu img {
     width: 13px;
+  }
+  .for-whom {
+    padding: 60px 10px;
+    gap: 50px;
+  }
+  .for-whom h2 {
+    padding: 0;
+    width: 100%;
+  }
+  .for-whom-content {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .for-whom .star-1 {
+    width: 33px;
+    left: 15px;
+    top: 68%;
+  }
+  .for-whom .star-2 {
+    width: 45px;
+    right: 10px;
+    top: 45%;
   }
 }/*# sourceMappingURL=tablet.css.map */

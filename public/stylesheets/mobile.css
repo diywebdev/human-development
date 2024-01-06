@@ -1,1 +1,15 @@
-/*# sourceMappingURL=mobile.css.map */
+@media screen and (max-width: 586px) {
+  .for-whom {
+    padding: 50px 10px;
+    gap: 30px;
+  }
+  .for-whom-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .for-whom-item {
+    width: 100%;
+  }
+}/*# sourceMappingURL=mobile.css.map */

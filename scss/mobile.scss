@@ -1,0 +1,12 @@
+@media screen and (max-width: 586px) {
+	.for-whom{
+		padding: 50px 10px;
+		gap: 30px;
+		&-content{
+			flex-direction: column;
+		}
+		&-item{
+			width: 100%;
+		}
+	}
+}

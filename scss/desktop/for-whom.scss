@@ -5,7 +5,7 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	@include interpolate((padding-top, padding-bottom), 992px, 1920px, 68px, 131px);
+	@include interpolate((padding-top, padding-bottom), 992px, 1920px, 68px, 110px);
 	color: #fff;
 	z-index: 1;
 	&::before{
@@ -19,8 +19,7 @@
 	}
 	h2{
 		color: #E0E0FF;
-		@include interpolate(font-size, 992px, 1170px,  84.79px, 100px);
-		@include interpolate(font-size, 1171px, 1920px,  100px, 120px);	
+		@include interpolate(width, 992px, 1920px, 667px, 1095px);
 	}
 	&-content{
 		display: flex;
@@ -38,11 +37,24 @@
 			font-weight: bold;
 			@include interpolate(width, 992px, 1920px, 36px, 71px);
 			@include interpolate(height, 992px, 1920px, 36px, 71px);
+			@include interpolate(font-size, 992px, 1920px,  14px, 26px);	
 			border-radius: 50%;
 			background-color: #C5A23B;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 		}
+	}
+	.star-1{
+		@include interpolate(width, 992px, 1920px, 22px, 43px);
+		@include interpolate(bottom, 992px, 1920px, 113px, 218px);
+		@include interpolate(left, 992px, 1920px, 53px, 102px);
+		transform: rotate(25deg);
+	}
+	.star-2{
+		@include interpolate(width, 992px, 1920px, 49px, 95px);
+		@include interpolate(top, 992px, 1920px, 174px, 336px);
+		@include interpolate(right, 992px, 1920px, 134px, 259px);
+		transform: rotate(-15deg);
 	}
 }
