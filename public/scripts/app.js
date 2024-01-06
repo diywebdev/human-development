@@ -80,8 +80,14 @@ const slider = new Swiper('.site-wrapper', {
 	}
 });
 
-if(window.innerWidth < 993){
-	slider.disable()
-}else{
-	slider.enable()
+function resizeSlider(){
+	if(window.innerWidth < 993){
+		slider.disable()
+	}else{
+		slider.enable()
+	}
 }
+
+resizeSlider()
+
+window.addEventListener('resize', resizeSlider())

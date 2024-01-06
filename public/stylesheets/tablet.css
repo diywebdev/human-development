@@ -112,8 +112,10 @@
   }
   .hero-content-mobile p {
     color: #8c8c8c;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     padding: 0 10px;
+    max-width: 320px;
+    width: 100%;
   }
   .hero-content-mobile ul {
     padding-bottom: 15px;
