@@ -76,4 +76,12 @@
 			display: none;
 		}
 	}
+	.quotes{
+		padding-top: 98px;
+		padding-bottom: 128px;
+		&::after{
+			background-image: url(../images/quotes/bg-mobile.png);
+			background-position: center top;
+		}
+	}
 }

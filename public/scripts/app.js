@@ -6,7 +6,7 @@ const slider = new Swiper('.site-wrapper', {
 	loop: false,
 	direction: 'vertical',
 	// allowTouchMove: false,
-	// initialSlide: 4,
+	initialSlide: 5,
 	// hashNavigation: {
 	// 	replaceState: true,
 	// },

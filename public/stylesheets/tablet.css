@@ -196,6 +196,15 @@
     padding: 0 16px;
     margin-bottom: 80px;
   }
+  .quotes {
+    padding: 100px 10px;
+  }
+  .quotes-item {
+    font-size: 20px;
+  }
+  .quotes .line {
+    margin: 30px auto;
+  }
 }
 @media screen and (max-width: 768px) {
   .learn-what-item-title {

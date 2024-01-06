@@ -90,4 +90,12 @@
   .authors-item {
     display: none;
   }
+  .quotes {
+    padding-top: 98px;
+    padding-bottom: 128px;
+  }
+  .quotes::after {
+    background-image: url(../images/quotes/bg-mobile.png);
+    background-position: center top;
+  }
 }/*# sourceMappingURL=mobile.css.map */
