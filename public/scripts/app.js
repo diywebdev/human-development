@@ -44,7 +44,7 @@ const slider = new Swiper('.site-wrapper', {
 						if(slideHeight === blockHeight || (slideHeight + slideScrollTop) >= blockHeight){
 							if(e.deltaY > 0){
 								swiper.slideNext()
-							}else{
+							}else if(slide.scrollTop == 0 && e.deltaY < 0){
 								swiper.slidePrev()
 							}
 						}
@@ -79,3 +79,31 @@ function resizeSlider(){
 resizeSlider()
 
 window.addEventListener('resize', resizeSlider())
+
+
+const reviewsSlider = new Swiper('.reviews-slider', {
+	spaceBetween: 10,
+	speed: 1000,
+	navigation: {
+		nextEl: '.reviews-slider-next',
+		prevEl: '.reviews-slider-prev',
+	},
+	breakpoints: {
+		// when window width is >= 320px
+		320: {
+		  slidesPerView: 1,
+		},
+		500: {
+			slidesPerView: 1.67,
+		},
+		768: {
+			slidesPerView: 2.37,
+		},
+		1171: {
+			slidesPerView: 3.37,
+		},
+		1500: {
+			slidesPerView: 4.57,
+		}
+	  }
+})
