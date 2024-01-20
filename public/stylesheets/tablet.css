@@ -205,6 +205,17 @@
   .quotes .line {
     margin: 30px auto;
   }
+  .video {
+    min-height: 640px;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    padding-right: 40px;
+  }
+  .video h2 {
+    width: 100%;
+    margin: 0;
+  }
 }
 @media screen and (max-width: 768px) {
   .learn-what-item-title {

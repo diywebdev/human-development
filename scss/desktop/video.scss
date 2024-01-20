@@ -1,0 +1,48 @@
+@import '../mixins';
+
+.video{
+	@include interpolate((padding-left, padding-top, padding-bottom), 992px, 1920px, 34px, 66px);
+	display: flex;
+	align-items: center;
+	z-index: 1;
+	&::after{
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: url(../images/video/bg.jpg);
+		background-size: cover;
+		background-position: center;
+		z-index: -1;
+	}
+	h2{
+		width: min-content;
+		@include interpolate(margin-left, 992px, 1920px, 42px, 80px);
+	}
+}
+
+.play-btn{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(1);
+	@include interpolate((width, height), 992px, 1920px, 140px, 271px);
+	border-radius: 50%;
+	background-color: rgba(#D82832, .3);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+	transition: transform .2s ease-in-out;
+	&:hover{
+		transform: translate(-50%, -50%) scale(.95);
+	}
+	.circle{
+		width: 64%;
+		height: 64%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #D82832;
+		border-radius: 50%;
+	}
+}
