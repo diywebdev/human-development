@@ -34,18 +34,18 @@
 
 .reviews-slider{
 	margin-top: 50px;
-	&::before{
-		content: '';
-		position: absolute;
-		background: rgba(#fff, 1);
-		filter: blur(30px);
-		width: 40%;
-		height: 100%;
-		bottom: 0;
-		right: -31%;
-		border-radius: 335px;
-		z-index: 5;
-	}
+	// &::before{
+	// 	content: '';
+	// 	position: absolute;
+	// 	background: rgba(#fff, 1);
+	// 	filter: blur(30px);
+	// 	width: 40%;
+	// 	height: 100%;
+	// 	bottom: 0;
+	// 	right: -31%;
+	// 	border-radius: 335px;
+	// 	z-index: 5;
+	// }
 	.swiper-slide{
 		padding-top: 30px;
 	}
