@@ -1,0 +1,22 @@
+@import '../mixins';
+
+form{
+	input, .btn{
+		@include interpolate(font-size, 992px, 1170px, 15px, 18px);
+		@include interpolate(height, 992px, 1170px, 59px, 70px);
+		@include interpolate(border-radius, 992px, 1170px, 73px, 86px);
+		padding-top: 0;
+		padding-bottom: 0;
+		border: none;
+	}
+	input{
+		@include interpolate(padding-left, 992px, 1170px, 25px, 30px);
+		background-color: #fff;
+		&::placeholder{
+			color: #C7C7C7;
+		}
+		&:focus{
+			outline: 2px solid #C5A23B;
+		}
+	}
+}

@@ -1,0 +1,78 @@
+form input, form .btn {
+  padding-top: 0;
+  padding-bottom: 0;
+  border: none;
+}
+form input, form .btn {
+  font-size: 15px;
+}
+@media screen and (min-width: 992px) {
+  form input, form .btn {
+    font-size: calc(1.6853932584vw - 1.7191011236px);
+  }
+}
+@media screen and (min-width: 1170px) {
+  form input, form .btn {
+    font-size: 18px;
+  }
+}
+form input, form .btn {
+  height: 59px;
+}
+@media screen and (min-width: 992px) {
+  form input, form .btn {
+    height: calc(6.1797752809vw - 2.3033707865px);
+  }
+}
+@media screen and (min-width: 1170px) {
+  form input, form .btn {
+    height: 70px;
+  }
+}
+form input, form .btn {
+  border-radius: 73px;
+}
+@media screen and (min-width: 992px) {
+  form input, form .btn {
+    border-radius: calc(7.3033707865vw + 0.5505617978px);
+  }
+}
+@media screen and (min-width: 1170px) {
+  form input, form .btn {
+    border-radius: 86px;
+  }
+}
+form input {
+  background-color: #fff;
+}
+form input {
+  padding-left: 25px;
+}
+@media screen and (min-width: 992px) {
+  form input {
+    padding-left: calc(2.808988764vw - 2.8651685393px);
+  }
+}
+@media screen and (min-width: 1170px) {
+  form input {
+    padding-left: 30px;
+  }
+}
+form input::-webkit-input-placeholder {
+  color: #C7C7C7;
+}
+form input::-moz-placeholder {
+  color: #C7C7C7;
+}
+form input:-ms-input-placeholder {
+  color: #C7C7C7;
+}
+form input::-ms-input-placeholder {
+  color: #C7C7C7;
+}
+form input::placeholder {
+  color: #C7C7C7;
+}
+form input:focus {
+  outline: 2px solid #C5A23B;
+}/*# sourceMappingURL=form.css.map */

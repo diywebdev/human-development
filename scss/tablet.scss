@@ -186,6 +186,20 @@
 			margin: 0;
 		}
 	}
+	.course-registration{
+		padding: 90px 10px 0px;
+	}
+	.course-registration-form{
+		grid-template-columns: repeat(2, 1fr);
+		margin: 0;
+		padding: 0 10px;
+		max-width: 230px;
+	}
+	.course-registration .footer{
+		position: relative;
+		padding: 0;
+		padding-top: 38px;
+	}
 }
 
 @media screen and (max-width: 768px) {
@@ -235,5 +249,17 @@
 				text-align: center;
 			}
 		}
+	}
+	.course-registration-form{
+		grid-template-columns: repeat(1, 1fr);
+		padding: 0;
+	}
+	.course-registration .footer{
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+		text-align: center;
+		font-size: 14px;
 	}
 }

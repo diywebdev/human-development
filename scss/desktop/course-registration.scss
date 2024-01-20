@@ -1,0 +1,50 @@
+@import '../mixins';
+
+.course-registration{
+	@include interpolate((padding-top, padding-bottom), 992px, 11700px, 34px, 40px);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	@include interpolate(gap, 992px, 1920px, 42px, 82px);
+	h2{
+		position: relative;
+	}
+	.free-badge{
+		@include interpolate(font-size, 992px, 1920px, 15px, 30px);
+		@include interpolate((padding-top, padding-bottom), 992px, 1920px, 9px, 18px);
+		@include interpolate((padding-left, padding-right), 992px, 1920px, 17px, 35px);
+		@include interpolate(border-radius, 992px, 1920px, 42px, 82px);
+		background-color: #C5A23B;
+		color: #FFF2CA;
+		font-weight: bold;
+		font-family: 'PT Sans', sans-serif;
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		line-height: 1;
+		bottom: 90%;
+	}
+	&-form{
+		margin: 0 10px;
+		max-width: 910px;
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		@include interpolate(gap, 992px, 1170px, 8px, 10px);
+		input, .btn{
+			width: 100%;
+		}
+	}
+	.footer{
+		width: 100%;
+		display: flex;
+		color: #C0C0C0;
+		justify-content: space-between;
+		@include interpolate(padding-left, 992px, 1170px, 34px, 40px);
+		@include interpolate(padding-right, 992px, 1170px, 119px, 140px);
+		position: absolute;
+		left: 0;
+		@include interpolate(bottom, 992px, 1170px, 34px, 40px);
+	}
+}
