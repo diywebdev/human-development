@@ -55,6 +55,12 @@ const slider = new Swiper('.site-wrapper', {
 					}
 				})
 			})
+		},
+		afterInit(swiper){
+			document.querySelectorAll('.animation').forEach(el => el.classList.add('active'));
+			setTimeout(() => {
+				swiper.slides[0].classList.remove('overflow')
+			}, 3000)
 		}
 	}
 });

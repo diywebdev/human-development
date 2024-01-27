@@ -255,4 +255,82 @@ section h2 {
       -ms-flex-positive: 1;
           flex-grow: 1;
   padding: 5px;
+}
+
+.overflow {
+  overflow-y: hidden !important;
+}
+
+.animation-1 {
+  opacity: 0;
+}
+.animation-1.active {
+  -webkit-animation: fade-in 2s ease-in-out 0s 1 forwards;
+          animation: fade-in 2s ease-in-out 0s 1 forwards;
+}
+
+.animation-2 {
+  opacity: 0;
+}
+.animation-2.active {
+  -webkit-animation: fade-in 2s ease-in-out 0.5s 1 forwards;
+          animation: fade-in 2s ease-in-out 0.5s 1 forwards;
+}
+
+.animation-3 {
+  opacity: 0;
+}
+.animation-3.active {
+  -webkit-animation: fade-in-up 1s ease-in-out 1s 1 forwards;
+          animation: fade-in-up 1s ease-in-out 1s 1 forwards;
+}
+
+.animation-4 {
+  opacity: 0;
+}
+.animation-4.active {
+  -webkit-animation: fade-in 2s ease-in-out 1s 1 forwards;
+          animation: fade-in 2s ease-in-out 1s 1 forwards;
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-in-up {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(150px);
+            transform: translateY(150px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
 }/*# sourceMappingURL=global.css.map */
