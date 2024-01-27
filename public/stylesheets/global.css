@@ -49,6 +49,10 @@ body {
   }
 }
 
+[data-swiper-parallax-y] {
+  will-change: transform;
+}
+
 h1,
 h2,
 h3 {

@@ -1,31 +1,26 @@
 const slider = new Swiper('.site-wrapper', {
-	a11y: {
-		prevSlideMessage: 'Previous slide',
-		nextSlideMessage: 'Next slide',
-	  },
 	loop: false,
 	direction: 'vertical',
-	// allowTouchMove: false,
-	// initialSlide: 8,
-	// hashNavigation: {
-	// 	replaceState: true,
-	// },
+	parallax: true,
+	parallaxTransition: 3000,
+	hashNavigation: {
+		replaceState: false,
+		watchState: true
+	},
 	keyboard: {
 		enabled: true,
 		onlyInViewport: false,
 	},
-	effect: 'creative',
-	creativeEffect: {
-		prev: {
-			// shadow: true,
-			translate: [0, '-40%', -1],
-		},
-		next: {
-			translate: [0, '100%', 0],
-		},
-	},
+	// effect: 'creative',
+	// creativeEffect: {
+	// 	prev: {
+	// 		translate: [0, '-40%', -1],
+	// 	},
+	// 	next: {
+	// 		translate: [0, '100%', 0],
+	// 	},
+	// },
 	speed: 1000,
-	// hashNavigation: true,
 	pagination: {
 		clickable: true,
 		el: '.site-pagination',
@@ -58,10 +53,6 @@ const slider = new Swiper('.site-wrapper', {
 						  isScrolling = false;
 						}, 500);
 					}
-					// console.log('Slide hieght', slideHeight);
-					// console.log('Block hieght', blockHeight);
-					// console.log('DELTA', e.deltaY);
-					// console.log('Slide scroll', slide.scrollTop);
 				})
 			})
 		}
@@ -78,7 +69,7 @@ function resizeSlider(){
 
 resizeSlider()
 
-window.addEventListener('resize', resizeSlider())
+window.addEventListener('resize', resizeSlider)
 
 
 const reviewsSlider = new Swiper('.reviews-slider', {
@@ -89,7 +80,6 @@ const reviewsSlider = new Swiper('.reviews-slider', {
 		prevEl: '.reviews-slider-prev',
 	},
 	breakpoints: {
-		// when window width is >= 320px
 		320: {
 		  slidesPerView: 1,
 		},

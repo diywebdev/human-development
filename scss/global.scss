@@ -36,6 +36,10 @@ body {
 	// @include interpolate(font-size, 1171px, 1920px,  16px, 18px);
 }
 
+[data-swiper-parallax-y]{
+	will-change: transform;
+}
+
 h1,
 h2,
 h3 {
