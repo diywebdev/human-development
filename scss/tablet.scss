@@ -1,6 +1,9 @@
 @import "mixins";
 
 @media screen and (max-width: 992px) {
+	[data-swiper-parallax-y]{
+		transform: translate3d(0, 0, 0) !important;
+	}
 	html, body, .site-wrapper, .swiper-slide{
 		height: auto !important;
 	}
