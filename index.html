@@ -13,6 +13,7 @@
 
 	<link rel="stylesheet" href="public/stylesheets/global.css?12444">
 
+	<link rel="stylesheet" href="public/stylesheets/site-menu.css?12444">
 	<link rel="stylesheet" href="public/stylesheets/site-pagination.css?12444">
 	<link rel="stylesheet" href="public/stylesheets/form.css?12444">
 	<link rel="stylesheet" href="public/stylesheets/hero.css?12444">
@@ -35,11 +36,52 @@
 		<div class="logo">
 			<img src="public/images/logo.png" alt="ALT">
 		</div>
-		<a href="#!" class="burger-menu">
-			<img src="public/images/icons/burger.svg" alt="Menu">
+		<a href="#" class="menu-btn burger-menu-open">
+			<img src="public/images/icons/burger.png" alt="Menu">
 			Меню
 		</a>
 	</header>
+
+	<div class="site-menu">
+		<nav class="site-menu-nav">
+
+			<div class="site-menu-header">
+				<div class="logo">
+					<img src="public/images/logo.png" alt="ALT">
+				</div>
+				<a href="#" class="menu-btn burger-menu-close">
+					<img src="public/images/icons/close.png" alt="Close Menu">
+					Меню
+				</a>
+			</div>
+
+			<a href="#hero" class="site-menu-nav-link">Главная</a>
+			<a href="#for-whom" class="site-menu-nav-link">Для кого</a>
+			<a href="#learn-what" class="site-menu-nav-link">Что узнаете</a>
+			<a href="#of-what" class="site-menu-nav-link">Из чего состоит</a>
+			<a href="#authors" class="site-menu-nav-link">Авторы</a>
+			<a href="#reviews" class="site-menu-nav-link">Отзывы</a>
+		</nav>
+		<div class="site-menu-form blue-gradient">
+			<span>Бесплатный курс</span>
+			<h3>Запись</h3>
+
+			<form>
+				<input type="text" name="name" placeholder="Имя" required>
+				<input type="text" name="name" placeholder="Фамилия">
+				<input type="email" name="name" placeholder="E-mail" required>
+				<button type="submit" class="btn form-btn">Записаться</button>
+			</form>
+
+		</div>
+		<div class="site-menu-close">
+			<a href="#!" class="menu-btn burger-menu-close">
+				<img src="public/images/icons/close.png" alt="Close Menu">
+				Меню
+			</a>
+		</div>
+	</div>
+
 	<div class="swiper site-wrapper">
 		<div class="swiper-wrapper">
 
@@ -53,7 +95,7 @@
 					<div class="hero__left blue-gradient">
 						<img src="public/images/icons/star-purple.svg" alt="Star" class="star star-1 animation animation-4">
 						<img src="public/images/icons/star-gold-big.svg" alt="Star" class="star star-2 animation animation-4">
-						<div class="hero-book-mobile">
+						<div class="hero-book-mobile star animation animation-2">
 							<img src="public/images/hero/hero-book-mobile.png" alt="ALT">
 						</div>
 						<div class="hero__logo">
@@ -110,7 +152,7 @@
 			<section class="swiper-slide blue-gradient" data-hash="for-whom">
 				<div class="screen-block for-whom">
 					<img src="public/images/icons/star-purple.svg" alt="Star" class="star star-1" data-swiper-parallax-y="-200" data-swiper-parallax-scale="0.1" data-swiper-parallax-duration="1600">
-					<img src="public/images/icons/star-gold-big.svg" alt="Star" class="star star-2" data-swiper-parallax-y="200" data-swiper-parallax-scale="0.1" data-swiper-parallax-duration="1800">
+					<img src="public/images/icons/star-gold-big.svg" alt="Star" class="star star-2" data-swiper-parallax-y="-200" data-swiper-parallax-scale="0.1" data-swiper-parallax-duration="1800">
 
 					<h2 class="text-center" data-swiper-parallax-y="-400" data-swiper-parallax-duration="1300">Этот курс для вас, если вы:</h2>
 
@@ -461,7 +503,10 @@
 	</div>
 
 	<div class="site-wrapper-pagination">
-		<a href="#!" class="burger-menu">Меню</a>
+		<a href="#!" class="menu-btn burger-menu-open">
+			<img src="public/images/icons/burger.png" alt="Menu">
+			Меню
+		</a>
 		<div class="site-pagination"></div>
 		<a href="#course-registration" class="">Запись</a>
 	</div>

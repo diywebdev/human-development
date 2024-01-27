@@ -14,7 +14,7 @@ const slider = new Swiper('.site-wrapper', {
 	// effect: 'creative',
 	// creativeEffect: {
 	// 	prev: {
-	// 		translate: [0, '-40%', -1],
+	// 		translate: [0, '-20%', -1],
 	// 	},
 	// 	next: {
 	// 		translate: [0, '100%', 0],
@@ -57,10 +57,15 @@ const slider = new Swiper('.site-wrapper', {
 			})
 		},
 		afterInit(swiper){
-			document.querySelectorAll('.animation').forEach(el => el.classList.add('active'));
+			setTimeout(() => {
+				document.querySelectorAll('.animation').forEach(el => el.classList.add('active'));
+			}, 500)
 			setTimeout(() => {
 				swiper.slides[0].classList.remove('overflow')
 			}, 3000)
+		},
+		beforeTransitionStart(swiper, speed, internal){
+			document.querySelector('.site-menu').classList.remove('active');
 		}
 	}
 });
@@ -103,3 +108,17 @@ const reviewsSlider = new Swiper('.reviews-slider', {
 		}
 	  }
 })
+
+// MENU
+document.querySelectorAll('.burger-menu-open').forEach(link => {
+	link.addEventListener('click', e => {
+		e.preventDefault();
+		document.querySelector('.site-menu').classList.add('active');
+	});
+});
+document.querySelectorAll('.burger-menu-close').forEach(link => {
+	link.addEventListener('click', e => {
+		e.preventDefault();
+		document.querySelector('.site-menu').classList.remove('active');
+	})
+});

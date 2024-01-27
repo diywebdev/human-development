@@ -1,0 +1,87 @@
+@import './mixins';
+
+.site-menu{
+	position: fixed;
+	inset: 0;
+	background-color: #fff;
+	z-index: 10000;
+	display: flex;
+	justify-content: space-between;
+	transition: transform .5s ease-in-out;
+	transform: translateY(-100%);
+	&.active{
+		transform: translateY(0);
+	}
+	&-header{
+		display: none;
+		align-items: center;
+		justify-content: space-between;
+		height: 65px;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		background-color: #fff;
+		padding: 0 10px;
+		.logo{
+			width: 134px;
+		}
+	}
+	&-nav{
+		@include interpolate((padding-top, padding-bottom, padding-left), 992px, 1170px,  68px, 80px);
+		flex-grow: 1;
+		min-height: 700px;
+		height: 100vh;
+		overflow-y: auto;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		&-link{
+			font-family: 'Playfair Display', serif;
+			color: #151554;
+			line-height: 1;
+			@include interpolate(font-size, 992px, 1170px, 51px, 60px);
+			&:hover{
+				color: #C5A23B;
+			}
+		}
+	}
+	&-form{
+		@include interpolate(width, 992px, 1920px, 371px, 717px);
+		@include interpolate((padding-top, padding-bottom), 992px, 1170px,  34px, 40px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		span{
+			font-weight: bold;
+			color: #C5A23B;
+		}
+		h3{
+			line-height: 1;
+			@include interpolate(font-size, 992px, 1170px, 51px, 60px);
+			color: #E0E0FF;
+			margin-bottom: 25px;
+		}
+		form{
+			@include interpolate(max-width, 1170px, 1920px, 220px, 361px);
+			width: 100%;
+		}
+		input{
+			margin-bottom: 10px;
+			background-color: #2A2A91;
+			color: #E0E0FF;
+			width: 100%;
+			&::placeholder{
+				color: #5050B5;
+			}
+		}
+		button{
+			width: 100%;
+		}
+	}
+	&-close{
+		@include interpolate(width, 992px, 1170px, 85px, 100px);
+		@include interpolate((padding-top, padding-bottom), 992px, 1170px,  34px, 40px);
+		text-align: center;
+	}
+}

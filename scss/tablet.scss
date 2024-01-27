@@ -1,6 +1,12 @@
 @import "mixins";
 
 @media screen and (max-width: 992px) {
+	.site-menu-nav-link{
+		font-size: 40px;
+	}
+	.site-menu-form{
+		width: 300px;
+	}
 	[data-swiper-parallax-y]{
 		transform: translate3d(0, 0, 0) !important;
 	}
@@ -216,6 +222,24 @@
 }
 
 @media screen and (max-width: 768px) {
+	.site-menu-header{
+		display: flex;
+	}
+	.site-menu-form, .site-menu-close{
+		display: none;
+	}
+	.site-menu-nav{
+		align-items: center;
+		padding: 75px 10px 40px;
+		min-height: 500px;
+		height: calc(100vh - 65px);
+		justify-content: center;
+		gap: 35px;
+	}
+	.site-menu-nav-link{
+		width: 100%;
+		text-align: center;
+	}
 	.learn-what-item-title{
 		font-size: 20px;
 	}
