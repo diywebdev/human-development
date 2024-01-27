@@ -100,7 +100,12 @@
 			width: 100%;
 		}
 		ul{
+			max-width: 320px;
+			width: 100%;
+			margin: 0 auto;
 			padding-bottom: 15px;
+			text-align: left;
+			padding-left: 30px;
 			li{
 				font-size: 14px;
 				line-height: 1.4;
@@ -184,6 +189,11 @@
 		h2{
 			width: 100%;
 			margin: 0;
+			display: none;
+			&.mobile{
+				display: block;
+				text-align: center;
+			}
 		}
 	}
 	.course-registration{
@@ -208,7 +218,11 @@
 	}
 	.learn-what-item ul{
 		// padding: 0 65px;
-		list-style: none;
+		// list-style: none;
+		padding-left: 30px;
+		max-width: 320px;
+		margin: 0 auto;
+		text-align: left;
 	}
 	.learn-what-item li{
 		font-size: 16px;
@@ -237,16 +251,16 @@
 		gap: 15px;
 		.of-what-item{
 			flex-direction: column;
-			align-items: center;
+			// align-items: center;
 			gap: 10px;
 			font-size: 18px;
 			color: #E0E0FF;
-			text-align: center;
+			// text-align: center;
 			width: fit-content;
 			.number{
 				font-size: 40px;
-				max-width: auto;
-				text-align: center;
+				max-width: none;
+				text-align: left;
 			}
 		}
 	}

@@ -63,12 +63,12 @@
 }
 @media screen and (min-width: 992px) {
   .course-registration .free-badge {
-    font-size: calc(1.6163793103vw - 1.0344827586px);
+    font-size: calc(1.6853932584vw - 1.7191011236px);
   }
 }
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1170px) {
   .course-registration .free-badge {
-    font-size: 30px;
+    font-size: 18px;
   }
 }
 .course-registration .free-badge {

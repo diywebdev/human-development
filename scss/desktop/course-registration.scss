@@ -11,7 +11,7 @@
 		position: relative;
 	}
 	.free-badge{
-		@include interpolate(font-size, 992px, 1920px, 15px, 30px);
+		@include interpolate(font-size, 992px, 1170px, 15px, 18px);
 		@include interpolate((padding-top, padding-bottom), 992px, 1920px, 9px, 18px);
 		@include interpolate((padding-left, padding-right), 992px, 1920px, 17px, 35px);
 		@include interpolate(border-radius, 992px, 1920px, 42px, 82px);

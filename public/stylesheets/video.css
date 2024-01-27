@@ -39,6 +39,7 @@
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
+  text-align: left;
 }
 .video h2 {
   margin-left: 42px;
@@ -52,6 +53,9 @@
   .video h2 {
     margin-left: 80px;
   }
+}
+.video h2.mobile {
+  display: none;
 }
 
 .play-btn {

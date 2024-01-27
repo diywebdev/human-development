@@ -118,7 +118,12 @@
     width: 100%;
   }
   .hero-content-mobile ul {
+    max-width: 320px;
+    width: 100%;
+    margin: 0 auto;
     padding-bottom: 15px;
+    text-align: left;
+    padding-left: 30px;
   }
   .hero-content-mobile ul li {
     font-size: 14px;
@@ -215,6 +220,11 @@
   .video h2 {
     width: 100%;
     margin: 0;
+    display: none;
+  }
+  .video h2.mobile {
+    display: block;
+    text-align: center;
   }
   .course-registration {
     padding: 90px 10px 0px;
@@ -236,7 +246,10 @@
     font-size: 20px;
   }
   .learn-what-item ul {
-    list-style: none;
+    padding-left: 30px;
+    max-width: 320px;
+    margin: 0 auto;
+    text-align: left;
   }
   .learn-what-item li {
     font-size: 16px;
@@ -271,21 +284,17 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
     gap: 10px;
     font-size: 18px;
     color: #E0E0FF;
-    text-align: center;
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
   }
   .of-what-items-mobile .of-what-item .number {
     font-size: 40px;
-    max-width: auto;
-    text-align: center;
+    max-width: none;
+    text-align: left;
   }
   .course-registration-form {
     grid-template-columns: repeat(1, 1fr);

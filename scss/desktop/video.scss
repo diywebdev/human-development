@@ -17,6 +17,10 @@
 	h2{
 		width: min-content;
 		@include interpolate(margin-left, 992px, 1920px, 42px, 80px);
+		text-align: left;
+		&.mobile{
+			display: none;
+		}
 	}
 }
 

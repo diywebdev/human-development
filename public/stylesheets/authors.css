@@ -35,11 +35,36 @@
   z-index: -1;
 }
 .authors h2 {
-  font-size: 70px;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
-  margin-top: 17px;
+  margin: 17px auto 0;
+}
+.authors h2 {
+  font-size: 59px;
+}
+@media screen and (min-width: 992px) {
+  .authors h2 {
+    font-size: calc(6.0344827586vw - 0.8620689655px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .authors h2 {
+    font-size: 115px;
+  }
+}
+.authors h2 {
+  max-width: 821px;
+}
+@media screen and (min-width: 992px) {
+  .authors h2 {
+    max-width: calc(82.7586206897vw + 0.0344827586px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .authors h2 {
+    max-width: 1589px;
+  }
 }
 .authors-row {
   display: -webkit-box;

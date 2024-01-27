@@ -117,6 +117,9 @@
   .video {
     padding: 50px 10px;
   }
+  .video h2 {
+    font-size: 45px;
+  }
   .course-registration .free-badge {
     bottom: 100%;
     padding: 12px 14px;
