@@ -1,11 +1,27 @@
+// MENU
+document.querySelectorAll('.burger-menu-open').forEach(link => {
+	link.addEventListener('click', e => {
+		e.preventDefault();
+		document.querySelector('.site-menu').classList.add('active');
+	});
+});
+document.querySelectorAll('.burger-menu-close').forEach(link => {
+	link.addEventListener('click', e => {
+		e.preventDefault();
+		document.querySelector('.site-menu').classList.remove('active');
+	})
+});
+
+// SITE SLIDER
+
 const slider = new Swiper('.site-wrapper', {
 	loop: false,
 	direction: 'vertical',
-	parallax: true,
 	hashNavigation: {
 		replaceState: false,
 		watchState: true
 	},
+	parallax: true,
 	keyboard: {
 		enabled: true,
 		onlyInViewport: false,
@@ -55,6 +71,9 @@ const slider = new Swiper('.site-wrapper', {
 						}
 					})
 				})
+			}else{
+				// swiper.params.parallax = false;
+				// swiper.update()
 			}
 		},
 		afterInit(swiper){
@@ -67,6 +86,23 @@ const slider = new Swiper('.site-wrapper', {
 		},
 		beforeTransitionStart(swiper, speed, internal){
 			document.querySelector('.site-menu').classList.remove('active');
+		},
+		slideChangeTransitionEnd(){
+			const activeSlide = this.slides[this.activeIndex];
+			const block = activeSlide.querySelector('.screen-block');
+			if(block){
+				Array.from(block.getElementsByTagName("*")).forEach(child => {
+					if(child.dataset){
+						child.removeAttribute('data-swiper-parallax-y');
+						child.removeAttribute('data-swiper-parallax-opacity');
+						child.removeAttribute('data-swiper-parallax-scale');
+						child.removeAttribute('data-swiper-parallax-duration');
+					}
+					if(window.innerWidth <= 992){
+						child.removeAttribute('style');
+					}
+				})
+			}
 		}
 	},
 	breakpoints: {
@@ -78,13 +114,14 @@ const slider = new Swiper('.site-wrapper', {
 			},
 		},
 		992: {
-			freeMode: false
+			freeMode: false,
 		}
 	}
 });
 
 window.addEventListener('resize', slider.update());
 
+// REVIEWS SLIDER
 const counterEl = document.querySelector('.slider-counter');
 const reviewsSlider = new Swiper('.reviews-slider', {
 	spaceBetween: 10,
@@ -133,21 +170,7 @@ if(counterEl && reviewsSlider){
 	counterEl.querySelector('.total').innerText = total < 10 ? '0'+total : total;
 }
 
-// MENU
-document.querySelectorAll('.burger-menu-open').forEach(link => {
-	link.addEventListener('click', e => {
-		e.preventDefault();
-		document.querySelector('.site-menu').classList.add('active');
-	});
-});
-document.querySelectorAll('.burger-menu-close').forEach(link => {
-	link.addEventListener('click', e => {
-		e.preventDefault();
-		document.querySelector('.site-menu').classList.remove('active');
-	})
-});
-
-// Video
+// VIDEO
 const video = document.querySelectorAll(".video");
 const playerEl = document.querySelector('.player-overlay');
 let videoIsLoad = false;
