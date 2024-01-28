@@ -29,7 +29,6 @@
 		}
 	}
 }
-
 // SLIDER
 
 .reviews-slider{
@@ -133,4 +132,11 @@
 	padding: 13px 18px;
 	border-radius: 50px;
 	color: #C0C0C0;
+	display: none;
+}
+
+@media (min-width: 320px) and (max-width: 499px) {
+	.slider-counter{
+		display: block;
+	}
 }

@@ -85,6 +85,7 @@ const slider = new Swiper('.site-wrapper', {
 
 window.addEventListener('resize', slider.update());
 
+const counterEl = document.querySelector('.slider-counter');
 const reviewsSlider = new Swiper('.reviews-slider', {
 	spaceBetween: 10,
 	speed: 1000,
@@ -98,20 +99,39 @@ const reviewsSlider = new Swiper('.reviews-slider', {
 		  autoHeight: true
 		},
 		500: {
-			slidesPerView: 1.67,
-			autoHeight: false
+			slidesPerView: 1.47,
+			autoHeight: false,
 		},
 		768: {
-			slidesPerView: 2.37,
+			slidesPerView: 2.27,
 		},
 		1171: {
-			slidesPerView: 3.37,
+			slidesPerView: 2.47,
 		},
 		1500: {
-			slidesPerView: 4.57,
+			slidesPerView: 3.17,
+		},
+		1600: {
+			slidesPerView: 3.47,
+		},
+		1800: {
+			slidesPerView: 3.87,
+		}
+	},
+	on: {
+		slideChangeTransitionEnd(swiper){
+			if(counterEl){
+				const active = swiper.activeIndex+1
+				counterEl.querySelector('.current').innerText = active < 10 ? '0'+active : active;
+			}
 		}
 	}
 })
+
+if(counterEl && reviewsSlider){
+	const total = reviewsSlider.slides.length;
+	counterEl.querySelector('.total').innerText = total < 10 ? '0'+total : total;
+}
 
 // MENU
 document.querySelectorAll('.burger-menu-open').forEach(link => {
