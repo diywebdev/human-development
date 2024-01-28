@@ -1,11 +1,12 @@
 @import '../mixins';
 
-.video{
+.video {
 	@include interpolate((padding-left, padding-top, padding-bottom), 992px, 1920px, 34px, 66px);
 	display: flex;
 	align-items: center;
-	z-index: 1;
-	&::after{
+	z-index: 10000;
+
+	&::after {
 		content: '';
 		position: absolute;
 		inset: 0;
@@ -14,17 +15,19 @@
 		background-position: center;
 		z-index: -1;
 	}
-	h2{
+
+	h2 {
 		width: min-content;
 		@include interpolate(margin-left, 992px, 1920px, 42px, 80px);
 		text-align: left;
-		&.mobile{
+
+		&.mobile {
 			display: none;
 		}
 	}
 }
 
-.play-btn{
+.play-btn {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -37,10 +40,12 @@
 	align-items: center;
 	cursor: pointer;
 	transition: transform .2s ease-in-out;
-	&:hover{
+
+	&:hover {
 		transform: translate(-50%, -50%) scale(.95);
 	}
-	.circle{
+
+	.circle {
 		width: 64%;
 		height: 64%;
 		display: flex;
@@ -48,5 +53,103 @@
 		align-items: center;
 		background-color: #D82832;
 		border-radius: 50%;
+	}
+}
+
+.player-overlay {
+	position: absolute;
+	inset: 0;
+	background-color: rgba(#000, .7);
+	z-index: 1000;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .25s ease-in-out;
+
+	&.active {
+		opacity: 1;
+		visibility: visible;
+	}
+}
+
+.close-video-player {
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 32px;
+	position: absolute;
+	right: 10px;
+	top: 0px;
+	color: #fff;
+	cursor: pointer;
+	opacity: 0.6;
+	transition: opacity .25s;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.player-wrap {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(#fff, .9);
+	width: 80%;
+	aspect-ratio: 16 / 9;
+
+	#player {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		// object-fit: cover;
+	}
+}
+
+.lds-ring {
+	display: inline-block;
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	width: 80px;
+	height: 80px;
+}
+
+.lds-ring div {
+	box-sizing: border-box;
+	display: block;
+	position: absolute;
+	width: 64px;
+	height: 64px;
+	margin: 8px;
+	border: 8px solid #c5a23b;
+	border-radius: 50%;
+	animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	border-color: #c5a23b transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+	animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+	animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+	animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
 	}
 }
