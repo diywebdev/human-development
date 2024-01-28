@@ -9,14 +9,22 @@
     -webkit-transform: translate3d(0, 0, 0) !important;
             transform: translate3d(0, 0, 0) !important;
   }
-  html, body, .site-wrapper, .swiper-slide {
+  [data-swiper-parallax-scale] {
+    -webkit-transform: translate3d(0, 0, 0) scale(1) !important;
+            transform: translate3d(0, 0, 0) scale(1) !important;
+  }
+  [data-swiper-parallax-opacity] {
+    opacity: 1 !important;
+  }
+  .swiper-slide {
     height: auto !important;
   }
   body {
     font-size: 16px;
+    padding-top: 65px;
   }
   section {
-    overflow-y: visible !important;
+    overflow-y: inherit !important;
   }
   section h2 {
     font-size: 60px;
@@ -35,6 +43,7 @@
 @media screen and (max-width: 992px) {
   .screen-block {
     padding-right: 0;
+    min-height: 0;
   }
   .hero {
     -webkit-box-orient: vertical;
@@ -152,7 +161,8 @@
             justify-content: space-between;
     background-color: #fff;
     padding: 20px 10px;
-    position: sticky;
+    position: absolute;
+    width: 100%;
     top: 0;
     left: 0;
     z-index: 10;
@@ -261,16 +271,17 @@
     display: none;
   }
   .site-menu-nav {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 75px 10px 40px;
-    min-height: 500px;
     height: calc(100vh - 65px);
+    padding: 75px 10px 0px;
+  }
+  .site-menu-nav nav {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    gap: 35px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    min-height: 500px;
   }
   .site-menu-nav-link {
     width: 100%;

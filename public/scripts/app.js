@@ -2,7 +2,6 @@ const slider = new Swiper('.site-wrapper', {
 	loop: false,
 	direction: 'vertical',
 	parallax: true,
-	parallaxTransition: 3000,
 	hashNavigation: {
 		replaceState: false,
 		watchState: true
@@ -28,33 +27,35 @@ const slider = new Swiper('.site-wrapper', {
 	},
 	on: {
 		init(swiper){
-			let isScrolling = false;
-			swiper.slides.map(slide => {
-				slide.addEventListener('wheel', e => {
-					const slideHeight = slide.clientHeight;
-					const blockHeight = slide.querySelector('.screen-block').clientHeight;
-					const slideScrollTop = slide.scrollTop;
-					if (!isScrolling) {
-						isScrolling = true;
-						if(slideHeight === blockHeight || (slideHeight + slideScrollTop) >= blockHeight){
-							if(e.deltaY > 0){
-								swiper.slideNext()
-							}else if(slide.scrollTop == 0 && e.deltaY < 0){
-								swiper.slidePrev()
+			if(window.innerWidth > 992){
+				let isScrolling = false;
+				swiper.slides.map(slide => {
+					slide.addEventListener('wheel', e => {
+						const slideHeight = slide.clientHeight;
+						const blockHeight = slide.querySelector('.screen-block').clientHeight;
+						const slideScrollTop = slide.scrollTop;
+						if (!isScrolling) {
+							isScrolling = true;
+							if(slideHeight === blockHeight || (slideHeight + slideScrollTop) >= blockHeight){
+								if(e.deltaY > 0){
+									swiper.slideNext()
+								}else if(slide.scrollTop == 0 && e.deltaY < 0){
+									swiper.slidePrev()
+								}
 							}
-						}
-						else{
-							if(e.deltaY < 0){
-								swiper.slidePrev()
+							else{
+								if(e.deltaY < 0){
+									swiper.slidePrev()
+								}
 							}
-						}
 
-						setTimeout(function () {
-						  isScrolling = false;
-						}, 500);
-					}
+							setTimeout(function () {
+							isScrolling = false;
+							}, 500);
+						}
+					})
 				})
-			})
+			}
 		},
 		afterInit(swiper){
 			setTimeout(() => {
@@ -67,21 +68,22 @@ const slider = new Swiper('.site-wrapper', {
 		beforeTransitionStart(swiper, speed, internal){
 			document.querySelector('.site-menu').classList.remove('active');
 		}
+	},
+	breakpoints: {
+		320: {
+			slidesPerView: 'auto',
+			freeMode: {
+				enabled: true,
+				momentumBounce: false,
+			},
+		},
+		992: {
+			freeMode: false
+		}
 	}
 });
 
-function resizeSlider(){
-	if(window.innerWidth < 993){
-		slider.disable()
-	}else{
-		slider.enable()
-	}
-}
-
-resizeSlider()
-
-window.addEventListener('resize', resizeSlider)
-
+window.addEventListener('resize', slider.update());
 
 const reviewsSlider = new Swiper('.reviews-slider', {
 	spaceBetween: 10,
@@ -93,9 +95,11 @@ const reviewsSlider = new Swiper('.reviews-slider', {
 	breakpoints: {
 		320: {
 		  slidesPerView: 1,
+		  autoHeight: true
 		},
 		500: {
 			slidesPerView: 1.67,
+			autoHeight: false
 		},
 		768: {
 			slidesPerView: 2.37,
@@ -106,7 +110,7 @@ const reviewsSlider = new Swiper('.reviews-slider', {
 		1500: {
 			slidesPerView: 4.57,
 		}
-	  }
+	}
 })
 
 // MENU

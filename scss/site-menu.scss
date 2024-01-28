@@ -7,10 +7,12 @@
 	z-index: 10000;
 	display: flex;
 	justify-content: space-between;
-	transition: transform .5s ease-in-out;
+	transition: all .5s ease-in-out;
 	transform: translateY(-100%);
+	visibility: hidden;
 	&.active{
 		transform: translateY(0);
+		visibility: visible;
 	}
 	&-header{
 		display: none;
@@ -20,6 +22,7 @@
 		width: 100%;
 		position: absolute;
 		top: 0;
+		left: 0;
 		background-color: #fff;
 		padding: 0 10px;
 		.logo{
@@ -29,12 +32,15 @@
 	&-nav{
 		@include interpolate((padding-top, padding-bottom, padding-left), 992px, 1170px,  68px, 80px);
 		flex-grow: 1;
-		min-height: 700px;
 		height: 100vh;
 		overflow-y: auto;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+		nav{
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 100%;
+			gap: 35px;
+		}
 		&-link{
 			font-family: 'Playfair Display', serif;
 			color: #151554;
