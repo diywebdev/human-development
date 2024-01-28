@@ -1,0 +1,36 @@
+.success-page {
+  padding: 0 10px;
+  background-color: #F8F8F8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.success-page h1 {
+  color: #151554;
+  font-size: calc((1vw + 1vh) * 5.35);
+  margin-bottom: calc((1vw + 1vh) * 1.9);
+}
+.success-page p {
+  text-align: center;
+  color: #727272;
+  font-size: 18px;
+  margin-bottom: calc((1vw + 1vh) * 1.9);
+}
+@media screen and (max-width: 586px) {
+  .success-page p {
+    max-width: 225px;
+  }
+  .success-page p br {
+    display: none;
+  }
+}/*# sourceMappingURL=success-page.css.map */

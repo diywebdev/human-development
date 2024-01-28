@@ -1,0 +1,27 @@
+$idx: calc(1vw + 1vh);
+
+.success-page{
+	padding: 0 10px;
+	background-color: #F8F8F8;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	h1{
+		color: #151554;
+		font-size: calc($idx * 5.35);
+		margin-bottom: calc($idx * 1.9);
+	}
+	p{
+		text-align: center;
+		color: #727272;
+		font-size: 18px;
+		margin-bottom: calc($idx * 1.9);
+		@media screen and (max-width: 586px) {
+			max-width: 225px;
+			br{
+				display: none;
+			}			
+		}
+	}
+}
