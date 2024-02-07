@@ -7,6 +7,9 @@
 	.site-menu-form{
 		width: 300px;
 	}
+	[data-swiper-parallax-x]{
+		transform: translate3d(0, 0, 0) !important;
+	}
 	[data-swiper-parallax-y]{
 		transform: translate3d(0, 0, 0) !important;
 	}

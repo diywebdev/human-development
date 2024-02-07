@@ -93,6 +93,7 @@ const slider = new Swiper('.site-wrapper', {
 			if(block){
 				Array.from(block.getElementsByTagName("*")).forEach(child => {
 					if(child.dataset){
+						child.removeAttribute('data-swiper-parallax-x');
 						child.removeAttribute('data-swiper-parallax-y');
 						child.removeAttribute('data-swiper-parallax-opacity');
 						child.removeAttribute('data-swiper-parallax-scale');

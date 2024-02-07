@@ -5,6 +5,10 @@
   .site-menu-form {
     width: 300px;
   }
+  [data-swiper-parallax-x] {
+    -webkit-transform: translate3d(0, 0, 0) !important;
+            transform: translate3d(0, 0, 0) !important;
+  }
   [data-swiper-parallax-y] {
     -webkit-transform: translate3d(0, 0, 0) !important;
             transform: translate3d(0, 0, 0) !important;
