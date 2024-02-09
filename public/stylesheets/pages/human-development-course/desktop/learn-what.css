@@ -1,0 +1,139 @@
+.learn-what {
+  padding-top: 34px;
+  padding-bottom: 34px;
+}
+@media screen and (min-width: 992px) {
+  .learn-what {
+    padding-top: calc(3.4482758621vw - 0.2068965517px);
+    padding-bottom: calc(3.4482758621vw - 0.2068965517px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .learn-what {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+}
+.learn-what h2 {
+  margin-bottom: 34px;
+}
+@media screen and (min-width: 992px) {
+  .learn-what h2 {
+    margin-bottom: calc(3.4482758621vw - 0.2068965517px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .learn-what h2 {
+    margin-bottom: 66px;
+  }
+}
+.learn-what h2 {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+@media screen and (min-width: 992px) {
+  .learn-what h2 {
+    padding-left: calc(3.3519553073vw + 0.748603352px);
+    padding-right: calc(3.3519553073vw + 0.748603352px);
+  }
+}
+@media screen and (min-width: 1171px) {
+  .learn-what h2 {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+.learn-what-wrapper {
+  margin-bottom: 27px;
+}
+.learn-what-wrapper {
+  padding-left: 34px;
+  padding-right: 34px;
+}
+@media screen and (min-width: 992px) {
+  .learn-what-wrapper {
+    padding-left: calc(3.4482758621vw - 0.2068965517px);
+    padding-right: calc(3.4482758621vw - 0.2068965517px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .learn-what-wrapper {
+    padding-left: 66px;
+    padding-right: 66px;
+  }
+}
+.learn-what-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.learn-what-item {
+  padding-top: 25px;
+  padding-bottom: 25px;
+}
+@media screen and (min-width: 992px) {
+  .learn-what-item {
+    padding-top: calc(2.5862068966vw - 0.6551724138px);
+    padding-bottom: calc(2.5862068966vw - 0.6551724138px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .learn-what-item {
+    padding-top: 49px;
+    padding-bottom: 49px;
+  }
+}
+.learn-what-item:not(:last-child) {
+  border-bottom: 1px solid #d9d9d9;
+}
+.learn-what-item-col {
+  width: 50%;
+}
+.learn-what-item-col {
+  padding-left: 39px;
+}
+@media screen and (min-width: 992px) {
+  .learn-what-item-col {
+    padding-left: calc(3.8793103448vw + 0.5172413793px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .learn-what-item-col {
+    padding-left: 75px;
+  }
+}
+.learn-what-item-title {
+  color: #3c3c3c;
+}
+.learn-what-item-title {
+  font-size: 25px;
+}
+@media screen and (min-width: 992px) {
+  .learn-what-item-title {
+    font-size: calc(2.5862068966vw - 0.6551724138px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .learn-what-item-title {
+    font-size: 49px;
+  }
+}
+.learn-what-item li {
+  color: #8c8c8c;
+}
+.learn-what-item li {
+  font-size: 14px;
+}
+@media screen and (min-width: 992px) {
+  .learn-what-item li {
+    font-size: calc(1.2931034483vw + 1.1724137931px);
+  }
+}
+@media screen and (min-width: 1920px) {
+  .learn-what-item li {
+    font-size: 26px;
+  }
+}
+.learn-what-item li:not(:last-child) {
+  margin-bottom: 10px;
+}

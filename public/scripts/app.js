@@ -26,15 +26,6 @@ const slider = new Swiper('.site-wrapper', {
 		enabled: true,
 		onlyInViewport: false,
 	},
-	// effect: 'creative',
-	// creativeEffect: {
-	// 	prev: {
-	// 		translate: [0, '-20%', -1],
-	// 	},
-	// 	next: {
-	// 		translate: [0, '100%', 0],
-	// 	},
-	// },
 	speed: 1000,
 	pagination: {
 		clickable: true,
@@ -71,9 +62,6 @@ const slider = new Swiper('.site-wrapper', {
 						}
 					})
 				})
-			}else{
-				// swiper.params.parallax = false;
-				// swiper.update()
 			}
 		},
 		afterInit(swiper){
